@@ -1,13 +1,11 @@
 "use client";
 
-import ThemeSwitch from "@/components/theme-switch/ThemeSwitch";
+import LandingNav from "@/components/shared/navbars/LandingNav";
 
 export default function Home() {
   return (
-    <main className="w-full overflow-x-hidden min-h-screen">
-      <div className="container mx-auto w-full">
-        <ThemeSwitch />
-      </div>
-    </main>
+    <section className="landing">
+      <LandingNav />
+    </section>
   );
 }
