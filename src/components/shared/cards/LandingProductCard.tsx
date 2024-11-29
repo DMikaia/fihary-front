@@ -10,7 +10,7 @@ interface LandingCardProps extends LandingProductTypes {
 const LandingProductCard: FC<LandingCardProps> = ({ img, price, price_type, title, className }): JSX.Element => {
     return (
         <Card className={cn("landing-product__card relative border-none rounded-lg overflow-hidden shadow-none bg-white h-fit flex flex-col gap-6", className)}>
-            <div className="h-[180px] rounded-xl overflow-hidden w-full">
+            <div className="h-[154px] rounded-xl overflow-hidden w-full">
                 <img src={img} alt="landing-product" className="w-full object-cover transition-all duration-100 hover:scale-125 h-full" />
             </div>
             <CardContent className="p-0">
