@@ -13,7 +13,7 @@ export default function LandingNavResponsive({
 }: NavProps) {
   return (
     <div
-      className={`landing__nav__responsive bg-gray h-[calc(100vh_-_92px)] max-w-[250px] md:max-w-[300px] block w-full fixed right-0 px-5 md:px-10 py-12 z-50 lg:hidden ${
+      className={`landing__nav__responsive bg-gray h-[calc(100vh_-_92px)] mt-[92px] max-w-[250px] md:max-w-[300px] block w-full fixed right-0 px-5 md:px-10 py-12 z-50 lg:hidden ${
         isOpen
           ? "gap-0 p-0 ease-out duration-200 right-0"
           : "gap-8 p-8 ease-in duration-200 right-[-100%]"
