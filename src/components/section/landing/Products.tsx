@@ -50,7 +50,7 @@ const Products: FC = (): JSX.Element => {
     };
 
     return (
-        <section className="landing__products w-full overflow-hidden mt-16 px-6 lg:px-24">
+        <section className="landing__products w-full overflow-hidden mt-24 px-6 lg:px-24">
             <div className="container mx-auto px-1 md:px-7 bg-white shadow-boxShadow1 rounded-lg">
                 <div className="content px-5 md:px-7 lg:px-10 py-8">
                     <header className="flex flex-col md:flex-row md:justify-between md:items-end gap-4">

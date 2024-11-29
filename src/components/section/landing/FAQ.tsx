@@ -6,7 +6,7 @@ import { ACCORDION_DATA } from "@/constants/constant";
 
 const FAQ: FC = (): JSX.Element => {
     return (
-        <section className="landing__faq w-full overflow-hidden mt-16 px-6 lg:px-24">
+        <section className="landing__faq w-full overflow-hidden mt-20 px-6 lg:px-24">
             <header className="flex flex-col md:flex-row md:justify-between md:items-end gap-4">
                 <div>
                     <p className="text-primary-foreground">FAQ</p>

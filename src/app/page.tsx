@@ -13,8 +13,8 @@ export default function Home() {
     <section className="landing w-full min-h-screen bg-gray">
       <LandingNav />
       <Hero />
-      <About />
       <Products />
+      <About />
       <Formations />
       <FAQ />
       <Footer />
