@@ -74,3 +74,7 @@ body {
 .inter-tight {
   font-family: var(--font-inter-tight);
 }
+
+.landing-product__card {
+  border: none;
+}
