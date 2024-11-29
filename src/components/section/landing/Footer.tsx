@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="w-full overflow-x-hidden px-6 md:px-12 lg:px-32 py-8 bg-[#FBFDF7] mt-12">
-      <div className="container flex flex-col md:flex-row gap-4 justify-between">
+    <footer className="w-full overflow-x-hidden px-6 md:px-12 lg:px-24 py-8 bg-[#FBFDF7] mt-12">
+      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full justify-between items-start md:items-center">
         <div className="flex flex-col gap-4 md:max-w-[288px] lg:max-w-[480px]">
           <Image
             src="/icons/logo-2.svg"
