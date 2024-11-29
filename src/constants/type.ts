@@ -4,4 +4,9 @@ type LoginSlider = {
   description: string;
 };
 
-export type { LoginSlider };
+type LandingNav = {
+  label: string;
+  url: string;
+};
+
+export type { LandingNav, LoginSlider };

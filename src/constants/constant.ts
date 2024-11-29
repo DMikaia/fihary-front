@@ -1,4 +1,4 @@
-import { LoginSlider } from "./type";
+import { LandingNav, LoginSlider } from "./type";
 
 const loginSliders: LoginSlider[] = [
   {
@@ -15,4 +15,19 @@ const loginSliders: LoginSlider[] = [
   },
 ];
 
-export { loginSliders };
+const landingNav: LandingNav[] = [
+  {
+    label: "Accueil",
+    url: "/",
+  },
+  {
+    label: "Marketplace",
+    url: "/market",
+  },
+  {
+    label: "Formations",
+    url: "/courses",
+  },
+];
+
+export { loginSliders, landingNav };

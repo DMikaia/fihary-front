@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import localFont from "next/font/local";
 import type { Metadata } from "next";
 import "./globals.css";
+import StoreProvider from "../providers/StoreProvider";
 
 const workSans = localFont({
   src: "./fonts/WorkSans.ttf",
@@ -30,7 +31,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <StoreProvider>{children}</StoreProvider>
         </ThemeProvider>
       </body>
     </html>

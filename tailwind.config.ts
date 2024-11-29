@@ -9,9 +9,8 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "slider-1": "url('/img/login-slider-1.png')",
-        "slider-2": "url('/img/login-slider-2.png')",
+      boxShadow: {
+        boxShadow1: "0px 0px 57.2px 15px rgba(29, 21, 18, 0.05)",
       },
       colors: {
         background: "hsl(var(--background))",
@@ -26,7 +25,7 @@ export default {
         },
         primary: {
           DEFAULT: "#003E21",
-          foreground: "hsl(var(--primary-foreground))",
+          foreground: "#319F43",
         },
         secondary: {
           DEFAULT: "#0E0E0E",
@@ -44,6 +43,9 @@ export default {
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
+        },
+        gray: {
+          DEFAULT: "#FBFDF7",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
