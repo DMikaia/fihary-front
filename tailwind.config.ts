@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        sm1: "500px",
+        sm1: "450px",
       },
       boxShadow: {
         boxShadow1: "0px 0px 57.2px 15px rgba(29, 21, 18, 0.05)",

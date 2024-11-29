@@ -40,7 +40,7 @@ const Products: FC = (): JSX.Element => {
                 },
             },
             {
-                breakpoint: 500,
+                breakpoint: 450,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -51,8 +51,8 @@ const Products: FC = (): JSX.Element => {
 
     return (
         <section className="landing__products w-full overflow-hidden mt-16 px-6 lg:px-24">
-            <div className="container mx-auto px-2 md:px-7 bg-white shadow-boxShadow1 rounded-lg">
-                <div className="content px-10 py-8">
+            <div className="container mx-auto px-1 md:px-7 bg-white shadow-boxShadow1 rounded-lg">
+                <div className="content px-5 md:px-7 lg:px-10 py-8">
                     <header className="flex flex-col md:flex-row md:justify-between md:items-end gap-4">
                         <div>
                             <p className="text-primary-foreground">NOS PRODUITS</p>
@@ -67,7 +67,7 @@ const Products: FC = (): JSX.Element => {
                         <Slider {...settings} ref={sliderRef}>
                             {
                                 LANDING_PRODUCT_MOCK.map((product, index) => (
-                                    <LandingProductCard key={index} {...product} className={`mx-3 md:mx-5 ${index === 0 ? "ml-0" : ""} ${index === LANDING_PRODUCT_MOCK.length - 1 ? "mr-0" : ""}`} />
+                                    <LandingProductCard key={index} {...product} className={`sm1:mx-3 md:mx-5 ${index === 0 ? "ml-0" : ""} ${index === LANDING_PRODUCT_MOCK.length - 1 ? "mr-0" : ""}`} />
                                 ))
                             }
                         </Slider>

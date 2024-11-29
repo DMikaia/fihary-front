@@ -4,7 +4,7 @@ import { FC } from "react";
 
 const Formations: FC = (): JSX.Element => {
     return (
-        <section className="landing__formations w-full overflow-hidden mt-16 px-6 lg:px-24 bg-primary py-10">
+        <section className="landing__formations w-full overflow-hidden mt-28 px-6 lg:px-24 bg-primary py-10">
             <header className="flex flex-col md:flex-row md:justify-between md:items-end gap-4">
                 <div>
                     <p className="text-primary-foreground">NOS PRODUITS</p>
@@ -16,7 +16,7 @@ const Formations: FC = (): JSX.Element => {
                 </Button>
             </header>
             <div className="formations-preview mt-14">
-                <div className="video-preview h-[350px] rounded-lg bg-gray-400"></div>
+                <div className="video-preview h-[280px] md:h-[350px] rounded-lg bg-gray-400"></div>
                 <p className="text-white mt-4 max-w-[750px]">Apprenez à gérer vos cultures de manière éco-responsable en utilisant des techniques agricoles durables qui respectent l’environnement et augmentent la rentabilité.</p>
             </div>
         </section>
