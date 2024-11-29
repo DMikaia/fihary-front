@@ -10,7 +10,7 @@ export default function Login() {
   return (
     <section className="login w-full min-h-screen overflow-x-hidden flex">
       <div className="login__form w-full md:w-[45%] px-6 md:px-24 py-12 flex justify-center items-center">
-        <div className="h-fit w-full max-w-[416px] flex flex-col gap-8">
+        <div className="h-fit w-full max-w-[416px] flex flex-col gap-5">
           <Image
             src={"/icons/logo.svg"}
             width={112}
@@ -23,15 +23,14 @@ export default function Login() {
             Se connecter
           </h1>
 
-          <div className="flex flex-col gap-4">
-            <div className="w-full h-fit">
-              <p className="text-secondary-2">
-                Se connecter à votre compte en entrant les informations du
-                formulaire.
-              </p>
-            </div>
-            <LoginForm />
+          <div className="w-full h-fit">
+            <p className="text-secondary-2">
+              Se connecter à votre compte en entrant les informations du
+              formulaire.
+            </p>
           </div>
+
+          <LoginForm />
 
           <div className="or flex items-center gap-3">
             <div className="line flex-1 h-[1px] bg-black/40"></div>
