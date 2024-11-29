@@ -9,7 +9,7 @@ import { FC } from "react";
 const FAQAccordion: FC<AccordionTypes> = ({ question, response, index, className }): JSX.Element => {
     return (
         <Accordion type="single" collapsible className={cn(`w-full`, className)}>
-            <AccordionItem value={`item-${index}`} className="p-6 shadow-boxShadow1 rounded-xl">
+            <AccordionItem value={`item-${index}`} className="w-max p-6 shadow-boxShadow1 rounded-xl">
                 <AccordionTrigger className="text-secondary text-lg">
                     {question}
                 </AccordionTrigger>
