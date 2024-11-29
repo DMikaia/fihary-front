@@ -9,7 +9,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const About: FC = (): JSX.Element => {
+const Products: FC = (): JSX.Element => {
     const sliderRef = useRef<Slider | null>(null);
 
     const settings = {
@@ -50,7 +50,7 @@ const About: FC = (): JSX.Element => {
     };
 
     return (
-        <section className="landing__about w-full overflow-hidden h-screen mt-16 px-6 lg:px-24">
+        <section className="landing__products w-full overflow-hidden h-screen mt-16 px-6 lg:px-24">
             <div className="container mx-auto px-2 md:px-7 bg-white shadow-boxShadow1 rounded-lg">
                 <div className="content px-10 py-8">
                     <header className="flex flex-col md:flex-row md:justify-between md:items-end gap-4">
@@ -83,4 +83,4 @@ const About: FC = (): JSX.Element => {
     );
 };
 
-export default About;
+export default Products;
