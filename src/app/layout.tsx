@@ -1,4 +1,6 @@
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import localFont from "next/font/local";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -6,7 +8,7 @@ import "./globals.css";
 const workSans = localFont({
   src: "./fonts/WorkSans.ttf",
   variable: "--font-work-sans",
-  weight: "100 900",
+  weight: "500",
 });
 
 export const metadata: Metadata = {
