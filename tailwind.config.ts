@@ -9,6 +9,10 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "slider-1": "url('/img/login-slider-1.png')",
+        "slider-2": "url('/img/login-slider-2.png')",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

@@ -1,22 +1,37 @@
+import { loginSliders } from "@/constants/constant";
 import Slider from "react-slick";
+import { cn } from "../../../lib/utils";
 
 export default function LoginSlider() {
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
     slidesToShow: 1,
-    slidesToScroll: 1,
-    nextArrow: <div className="w-[64px] h-1 border-1 border-white"></div>,
-    prevArrow: <div className="w-[64px] h-1 border border-white/25"></div>,
   };
 
   return (
-    <Slider {...settings}>
-      <div>
-        <h1></h1>
-        <p></p>
-      </div>
+    <Slider {...settings} className="w-full h-full">
+      {loginSliders.map((slide, index) => (
+        <div
+          key={index}
+          className={cn(
+            `slide__${index + 1} ${
+              index + 1 === 1 ? "bg-slider-1" : "bg-slider-2"
+            }  bg-cover bg-center min-h-screen w-full`
+          )}
+        >
+          <div className="min-h-screen py-8 bg-gradient-to-r from-[#21212159]/35 to-[#42424233]/20 w-full flex flex-col items-center justify-end gap-4">
+            <h1 className="text-2xl text-white font-bold w-fit">
+              {slide.title}
+            </h1>
+            <p className="text-white w-[480px] text-center">
+              {slide.description}
+            </p>
+          </div>
+        </div>
+      ))}
     </Slider>
   );
 }
