@@ -14,15 +14,15 @@ const About: FC = (): JSX.Element => {
 
     const settings = {
         speed: 400,
-        slidesToScroll: 1,
-        slidesToShow: 3,
+        slidesToScroll: 4,
+        slidesToShow: 4,
         infinite: false,
         responsive: [
             {
                 breakpoint: 1689,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
                 },
             },
             {
@@ -53,12 +53,12 @@ const About: FC = (): JSX.Element => {
                         <Slider {...settings} ref={sliderRef}>
                             {
                                 LANDING_PRODUCT_MOCK.map((product, index) => (
-                                    <LandingProductCard key={index} {...product} className={`mx-4 ${index === 0 ? "ml-0" : ""} ${index === LANDING_PRODUCT_MOCK.length - 1 ? "mr-0" : ""}`} />
+                                    <LandingProductCard key={index} {...product} className={`mx-5 ${index === 0 ? "ml-0" : ""} ${index === LANDING_PRODUCT_MOCK.length - 1 ? "mr-0" : ""}`} />
                                 ))
                             }
                         </Slider>
                         <div className="slider-buttons absolute top-1/2 -right-3 transform -translate-y-1/2 flex space-x-2">
-                            <div className="right border border-[#003E21] bg-white hover:bg-[#003E21]/25 w-max rounded-full p-[5px] cursor-pointer" onClick={() =>  sliderRef.current?.slickNext()}>
+                            <div className="right border border-[#003E21] bg-white hover:bg-[#003E21]/25 w-max rounded-full p-[5px] cursor-pointer" onClick={() => sliderRef.current?.slickNext()}>
                                 <Image src="/icons/arrow-right.svg" height={30} width={30} alt="arrow-right-icon" />
                             </div>
                         </div>
