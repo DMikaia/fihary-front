@@ -8,9 +8,9 @@ import { FC } from "react";
 
 const Signup: FC = (): JSX.Element => {
     return (
-        <div className="signup__content max-w-[420px] w-full flex flex-col gap-5 items-center mt-10 mb-10">
+        <div className="signup__content max-w-[410px] md:max-w-[420px] lg:max-w-[420px] w-full flex flex-col gap-5 items-center mt-10 mb-10 px-6 md:px-0 relative z-30">
             <Image alt="fihary-logo" height={100} width={100} src="/icons/logo.svg" />
-            <h2 className="inter-tight text-3xl text-center text-secondary">Prêt a démarrer sur <b>Fihary</b> ?
+            <h2 className="inter-tight text-2xl md:text-3xl text-center text-secondary">Prêt a démarrer sur <b>Fihary</b> ?
                 Créér votre compte maintenant</h2>
             <p className="text-secondary-2 text-center max-w-[90%]">Entrez vos informations ci-dessous pour commencer</p>
             <SignupForm />
