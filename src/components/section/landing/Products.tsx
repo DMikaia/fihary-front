@@ -1,6 +1,5 @@
 "use client"
 
-import { LANDING_PRODUCT_MOCK } from "@/app/constants/__mock__/landingMock";
 import LandingProductCard from "@/components/shared/cards/LandingProductCard";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -8,6 +7,7 @@ import { FC, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { LANDING_PRODUCT_MOCK } from "@/constants/__mock__/landingMock";
 
 const Products: FC = (): JSX.Element => {
     const sliderRef = useRef<Slider | null>(null);

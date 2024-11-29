@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 import FAQAccordion from "./components/FAQAccordion";
-import { ACCORDION_DATA } from "@/app/constants/constant";
+import { ACCORDION_DATA } from "@/constants/constant";
 
 const FAQ: FC = (): JSX.Element => {
     return (
