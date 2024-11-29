@@ -1,3 +1,5 @@
+"use client"
+
 export default function About() {
   return (
     <section className="landing__about w-full overflow-x-hidden px-6 md:px-12 lg:px-24 mt-24">
