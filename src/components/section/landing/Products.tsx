@@ -56,7 +56,7 @@ const Products: FC = (): JSX.Element => {
                     <header className="flex flex-col md:flex-row md:justify-between md:items-end gap-4">
                         <div>
                             <p className="text-primary-foreground">NOS PRODUITS</p>
-                            <h2 className="text-secondary text-2xl md:text-3xl inter-tight max-w-[300px] mt-3 md:mt-5"><b>Explorez notre </b>sélection de produits</h2>
+                            <h2 className="text-secondary text-2xl lg:text-3xl inter-tight max-w-[250px] lg:max-w-[300px] mt-3 md:mt-5"><b>Explorez notre </b>sélection de produits</h2>
                         </div>
                         <Button variant="ghost" className="text-secondary w-max">
                             Afficher plus
