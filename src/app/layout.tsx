@@ -6,7 +6,7 @@ import "./globals.css";
 const workSans = localFont({
   src: "./fonts/WorkSans.ttf",
   variable: "--font-work-sans",
-  weight: "100 900",
+  weight: "500",
 });
 
 export const metadata: Metadata = {
