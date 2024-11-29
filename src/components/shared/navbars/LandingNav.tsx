@@ -1,6 +1,7 @@
 "use client";
 
 import LandingNavResponsive from "./components/LandingNavResponsive";
+import { toggleNav } from "@/lib/redux/slices/nav-slice";
 import { useDispatch, useSelector } from "react-redux";
 import { landingNav } from "@/constants/constant";
 import { Button } from "@/components/ui/button";
@@ -8,7 +9,6 @@ import { usePathname } from "next/navigation";
 import { RootState } from "@/lib/redux/store";
 import Image from "next/image";
 import Link from "next/link";
-import { toggleNav } from "../../../lib/redux/slices/nav-slice";
 
 export default function LandingNav() {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ export default function LandingNav() {
   const { isOpen } = useSelector((state: RootState) => state.nav);
 
   return (
-    <div className="h-[92px]">
+    <div className="h-[92px] relative">
       <nav className="landing__nav w-full h-[92px] overflow-x-hidden px-6 md:px-8 py-8">
         <div className="container mx-auto w-full flex justify-between items-center">
           <Image
@@ -27,7 +27,7 @@ export default function LandingNav() {
             className="w-[96px]"
           />
 
-          <div className="hidden md:flex justify-center items-center gap-4">
+          <div className="hidden lg:flex justify-center items-center gap-4">
             {landingNav.map((item, index) => (
               <Link
                 key={index}
@@ -41,14 +41,14 @@ export default function LandingNav() {
             ))}
           </div>
 
-          <div className="hidden md:flex gap-4 items-center justify-center">
+          <div className="hidden lg:flex gap-4 items-center justify-center">
             <Button variant={"ghost"}>Se connecter</Button>
             <Button>S&apos;inscrire</Button>
           </div>
 
           <Button
             variant={"ghost"}
-            className="block md:hidden bg-transparent hover:bg-transparent w-fit h-fit p-1 rounded-lg"
+            className="block lg:hidden bg-transparent hover:bg-transparent w-fit h-fit p-1 rounded-lg"
             onClick={() => dispatch(toggleNav())}
           >
             <Image
