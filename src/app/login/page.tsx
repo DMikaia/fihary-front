@@ -1,4 +1,5 @@
 import LoginForm from "@/components/shared/forms/LoginForm";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,14 +20,33 @@ export default function Login() {
             Se connecter
           </h1>
 
-          <div className="w-full h-fit">
-            <p className="text-secondary-2">
-              Se connecter à votre compte en entrant les informations du
-              formulaire.
-            </p>
+          <div className="flex flex-col gap-4">
+            <div className="w-full h-fit">
+              <p className="text-secondary-2">
+                Se connecter à votre compte en entrant les informations du
+                formulaire.
+              </p>
+            </div>
+            <LoginForm />
           </div>
 
-          <LoginForm />
+          <div className="or flex items-center gap-3">
+            <div className="line flex-1 h-[1px] bg-black/40"></div>
+            <p className="text-secondary font-semibold">Ou</p>
+            <div className="line flex-1 h-[1px] bg-black/40"></div>
+          </div>
+
+          <Button variant={"outline"} className="border-secondary-02 h-[45px]">
+            <Image
+              src="icons/google.svg"
+              alt="Logo of Google"
+              width={24}
+              height={24}
+            />
+            <p className="text-secondary text-base">
+              Se connecter avec Google
+            </p>
+          </Button>
 
           <p className="w-full text-center">
             Pas encore de compte?{" "}
