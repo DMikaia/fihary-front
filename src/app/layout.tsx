@@ -1,4 +1,6 @@
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import localFont from "next/font/local";
 import type { Metadata } from "next";
 import "./globals.css";
