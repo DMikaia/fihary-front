@@ -25,6 +25,18 @@ const LANDING_PRODUCT_MOCK: LandingProductTypes[] = [
     price_type: "kg",
     title: "Melon",
   },
+  {
+    img: "/img/mockdata/landing-product-mockup.png",
+    price: 2800,
+    price_type: "kg",
+    title: "Melon",
+  },
+  {
+    img: "/img/mockdata/landing-product-mockup.png",
+    price: 2800,
+    price_type: "kg",
+    title: "Melon",
+  },
 ];
 
 export { LANDING_PRODUCT_MOCK };
