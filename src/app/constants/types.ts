@@ -5,4 +5,11 @@ type LandingProductTypes = {
   price_type: string;
 };
 
-export type { LandingProductTypes };
+type AccordionTypes = {
+  question: string;
+  response: string;
+  index?: number;
+  className?: string;
+};
+
+export type { LandingProductTypes, AccordionTypes };

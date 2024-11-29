@@ -10,7 +10,7 @@ const Formations: FC = (): JSX.Element => {
                     <p className="text-primary-foreground">NOS PRODUITS</p>
                     <h2 className="text-white text-2xl md:text-3xl inter-tight max-w-[300px] mt-3 md:mt-4">Notre sélection de formation</h2>
                 </div>
-                <Button variant="ghost" className="text-white w-max">
+                <Button variant="ghost" className="text-white w-max hover:bg-transparent  hover:text-white/80">
                     Afficher plus
                     <Image alt="arrow-up-svg" height={23} width={23} src="/icons/arrow-up-2.svg" />
                 </Button>
