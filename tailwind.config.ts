@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        boxShadow1: "0px 0px 57.2px 15px rgba(29, 21, 18, 0.05)",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -40,6 +43,9 @@ export default {
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
+        },
+        gray: {
+          DEFAULT: "#FBFDF7",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
