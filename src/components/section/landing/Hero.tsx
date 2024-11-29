@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="landing__hero w-full overflow-x-hidden py-8">
-      <div className="container mx-auto w-full flex justify-center items-center gap-16 px-8">
+    <section className="landing__hero w-full overflow-x-hidden px-6 md:px-24 py-8">
+      <div className="container w-full flex justify-between items-center gap-16 px-8">
         <div className="landing__left flex flex-col gap-8 w-1/2 text-secondary">
           <h1 className="text-5xl">
             <span className="font-bold">Consommez malin,</span> soutenez nos
