@@ -27,7 +27,7 @@ export default function LandingNav() {
             className="w-[96px]"
           />
 
-          <div className="hidden lg:flex justify-center items-center gap-4">
+          <div className="hidden lg:flex justify-center items-center gap-8">
             {landingNav.map((item, index) => (
               <Link
                 key={index}
@@ -43,7 +43,7 @@ export default function LandingNav() {
 
           <div className="hidden lg:flex gap-4 items-center justify-center">
             <Button variant={"ghost"}>Se connecter</Button>
-            <Button>S&apos;inscrire</Button>
+            <Button className="text-white">S&apos;inscrire</Button>
           </div>
 
           <Button
