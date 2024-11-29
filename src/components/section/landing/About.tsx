@@ -1,7 +1,7 @@
 export default function About() {
   return (
-    <section className="landing__about w-full overflow-x-hidden px-6 md:px-12 mt-10">
-      <div className="container mx-auto w-full flex flex-col gap-16 items-center">
+    <section className="landing__about w-full overflow-x-hidden px-6 md:px-24 mt-10">
+      <div className="container w-full flex flex-col gap-16 items-center">
         <div className="w-fit h-fit text-center flex flex-col gap-4">
           <p className="text-[#A1D83B] text-sm">A PROPOS</p>
           <h1 className="text-2xl w-[280px]">
