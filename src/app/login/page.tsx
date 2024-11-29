@@ -30,9 +30,9 @@ export default function Login() {
             <LoginForm />
           </div>
 
-          <div className="or flex items-center gap-3">
+          <div className="or flex items-center gap-3 w-full">
             <div className="line flex-1 h-[1px] bg-black/40"></div>
-            <p className="text-secondary font-semibold">Ou</p>
+            <p className="text-secondary">Ou</p>
             <div className="line flex-1 h-[1px] bg-black/40"></div>
           </div>
 
@@ -48,7 +48,7 @@ export default function Login() {
             </p>
           </Button>
 
-          <p className="w-full text-center">
+          <p className="w-full text-center text-secondary">
             Pas encore de compte?{" "}
             <Link
               href="/signup"
