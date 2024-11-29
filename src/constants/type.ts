@@ -16,4 +16,11 @@ type AccordionTypes = {
   className?: string;
 };
 
-export type { LandingNav, LoginSlider, AccordionTypes };
+type LandingProductTypes = {
+  img: string;
+  price: number;
+  price_type: string;
+  title: string;
+};
+
+export type { LandingNav, LoginSlider, AccordionTypes, LandingProductTypes };

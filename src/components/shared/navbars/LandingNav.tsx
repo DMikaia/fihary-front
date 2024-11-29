@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 import { RootState } from "@/lib/redux/store";
 import Image from "next/image";
 import Link from "next/link";
+import { Fragment } from "react";
 
 export default function LandingNav() {
   const dispatch = useDispatch();
@@ -16,8 +17,8 @@ export default function LandingNav() {
   const { isOpen } = useSelector((state: RootState) => state.nav);
 
   return (
-    <div className="h-[92px] relative">
-      <nav className="landing__nav w-full h-[92px] fixed z-10 lg:absolute overflow-x-hidden px-6 md:px-8 py-8">
+    <Fragment>
+      <nav className="landing__nav w-full h-[80px] fixed z-10 top-0 bg-white lg:bg-gray lg:absolute overflow-hidden px-6 md:px-8 py-8">
         <div className="container mx-auto w-full flex justify-between items-center">
           <Image
             src={"/icons/logo-2.svg"}
@@ -61,6 +62,6 @@ export default function LandingNav() {
       </nav>
 
       <LandingNavResponsive activeLink={pathName} isOpen={isOpen} />
-    </div>
+    </Fragment>
   );
 }

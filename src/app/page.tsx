@@ -10,7 +10,7 @@ import Hero from "@/components/section/landing/Hero";
 
 export default function Home() {
   return (
-    <section className="landing w-full min-h-screen bg-gray">
+    <section className="landing w-full min-h-screen">
       <LandingNav />
       <Hero />
       <Products />

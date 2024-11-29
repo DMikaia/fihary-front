@@ -5,8 +5,8 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="w-full overflow-x-hidden px-6 md:px-12 lg:px-24 py-8 bg-white mt-20 pt-14">
-      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full justify-between items-start md:items-center">
-        <div className="flex flex-col gap-4 md:max-w-[288px] lg:max-w-[480px]">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full justify-between items-start">
+        <div className="flex flex-col gap-4">
           <Image
             src="/icons/logo-2.svg"
             width={112}
@@ -25,8 +25,8 @@ export default function Footer() {
           </Button>
         </div>
 
-        <div className="flex flex-col gap-4">
-          <h2 className="text-lg lg:text-xl text-primary font-semibold">
+        <div className="flex flex-col gap-4 justify-start">
+          <h2 className="text-lg lg:text-xl text-primary font-semibold inter-tight">
             Liens utiles
           </h2>
           <p className="text-sm lg:text-base text-secondary-2 hover:text-primary-foreground cursor-pointer duration-200 ease-linear">
@@ -44,7 +44,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <h2 className="text-lg lg:text-xl text-primary font-semibold">
+          <h2 className="text-lg lg:text-xl text-primary font-semibold inter-tight">
             Autres
           </h2>
           <p className="text-sm lg:text-base text-secondary-2 hover:text-primary-foreground cursor-pointer duration-200 ease-linear">
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <h2 className="text-lg lg:text-xl text-primary font-semibold">
+          <h2 className="text-lg lg:text-xl text-primary font-semibold inter-tight">
             Contactez nous
           </h2>
           <div className="flex gap-2">

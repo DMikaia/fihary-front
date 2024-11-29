@@ -1,4 +1,4 @@
-import { LandingProductTypes } from "../types";
+import { LandingProductTypes } from "../type";
 
 const LANDING_PRODUCT_MOCK: LandingProductTypes[] = [
   {
