@@ -14,11 +14,11 @@ export default function Home() {
       <LandingNav />
       <Hero />
       <About />
-      <Footer />
       <LandingNav />
       <Products />
       <Formations />
       <FAQ />
+      <Footer />
     </section>
   );
 }
