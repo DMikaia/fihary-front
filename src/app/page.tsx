@@ -1,6 +1,7 @@
 "use client";
 
 import LandingNav from "@/components/shared/navbars/LandingNav";
+import Footer from "@/components/section/landing/Footer";
 import About from "@/components/section/landing/About";
 import Hero from "@/components/section/landing/Hero";
 
@@ -10,6 +11,7 @@ export default function Home() {
       <LandingNav />
       <Hero />
       <About />
+      <Footer />
     </section>
   );
 }
