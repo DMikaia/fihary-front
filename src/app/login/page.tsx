@@ -33,36 +33,38 @@ export default function Login() {
           <LoginForm />
 
           <div className="or flex items-center gap-3">
-            <div className="line flex-1 h-[1px] bg-black/40"></div>
-            <p className="text-secondary font-semibold">Ou</p>
-            <div className="line flex-1 h-[1px] bg-black/40"></div>
-          </div>
+            <div className="or flex items-center gap-3 w-full">
+              <div className="line flex-1 h-[1px] bg-black/40"></div>
+              <p className="text-secondary">Ou</p>
+              <div className="line flex-1 h-[1px] bg-black/40"></div>
+            </div>
 
-          <Button variant={"outline"} className="border-secondary-02 h-[45px]">
-            <Image
-              src="icons/google.svg"
-              alt="Logo of Google"
-              width={24}
-              height={24}
-            />
-            <p className="text-secondary text-base">
-              Se connecter avec Google
+            <Button variant={"outline"} className="border-secondary-02 h-[45px]">
+              <Image
+                src="icons/google.svg"
+                alt="Logo of Google"
+                width={24}
+                height={24}
+              />
+              <p className="text-secondary text-base">
+                Se connecter avec Google
+              </p>
+            </Button>
+
+            <p className="w-full text-center text-secondary">
+              Pas encore de compte?{" "}
+              <Link
+                href="/signup"
+                className="text-[#1976D2] cursor-pointer font-semibold"
+              >
+                Créer un compte
+              </Link>
             </p>
-          </Button>
-
-          <p className="w-full text-center">
-            Pas encore de compte?{" "}
-            <Link
-              href="/signup"
-              className="text-[#1976D2] cursor-pointer font-semibold"
-            >
-              Créer un compte
-            </Link>
-          </p>
+          </div>
         </div>
-      </div>
-      <div className="login__image w-[55%] min-h-screen hidden md:block">
-        <LoginSlider />
+        <div className="login__image w-[55%] min-h-screen hidden md:block">
+          <LoginSlider />
+        </div>
       </div>
     </section>
   );

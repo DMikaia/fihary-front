@@ -70,3 +70,11 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.inter-tight {
+  font-family: var(--font-inter-tight);
+}
+
+.landing-product__card {
+  border: none;
+}
