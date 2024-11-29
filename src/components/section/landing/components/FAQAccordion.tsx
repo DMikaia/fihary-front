@@ -1,7 +1,7 @@
 "use client"
 
-import { AccordionTypes } from "@/app/constants/types";
 import { Accordion, AccordionContent, AccordionItem } from "@/components/ui/accordion";
+import { AccordionTypes } from "@/constants/type";
 import { cn } from "@/lib/utils";
 import { AccordionTrigger } from "@radix-ui/react-accordion";
 import { FC } from "react";

@@ -9,4 +9,11 @@ type LandingNav = {
   url: string;
 };
 
-export type { LandingNav, LoginSlider };
+type AccordionTypes = {
+  question: string;
+  response: string;
+  index?: number;
+  className?: string;
+};
+
+export type { LandingNav, LoginSlider, AccordionTypes };
