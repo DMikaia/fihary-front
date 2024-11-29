@@ -23,4 +23,15 @@ type LandingProductTypes = {
   title: string;
 };
 
-export type { LandingNav, LoginSlider, AccordionTypes, LandingProductTypes };
+type MarketCategoryTypes = {
+  label: string;
+  id: string;
+};
+
+export type {
+  LandingNav,
+  LoginSlider,
+  AccordionTypes,
+  LandingProductTypes,
+  MarketCategoryTypes,
+};
