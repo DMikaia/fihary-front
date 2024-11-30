@@ -7,8 +7,8 @@ import { FC } from "react";
 
 const OrderLeft: FC = (): JSX.Element => {
     return (
-        <div className="admin__order__left w-[75%] flex flex-col gap-10">
-            <div className="general__stat w-full grid lg:grid-cols-3 gap-6">
+        <div className="admin__order__left w-full xl:w-[75%] flex flex-col gap-10">
+            <div className="general__stat w-full grid sm2:grid-cols-2 lg:grid-cols-3 gap-6">
                 <StatCard
                     icon="/icons/shopping-cart.svg"
                     id={1}

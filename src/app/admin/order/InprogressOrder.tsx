@@ -11,7 +11,7 @@ const InprogressOrder: FC = (): JSX.Element => {
                 <h2 className="text-lg text-secondary inter-tight">Commandes en cours</h2>
             </header>
 
-            <div className="inprogress-order__content grid grid-cols-2 mt-5 gap-10">
+            <div className="inprogress-order__content grid sm2:grid-cols-2 mt-5 gap-6 lg:ap-10">
                 {
                     OrderInProgressMock.map((order, index) => (
                         <OrderCard key={index} {...order} />

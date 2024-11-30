@@ -11,6 +11,7 @@ export default {
     extend: {
       screens: {
         sm1: "450px",
+        sm2: "600px",
       },
       boxShadow: {
         boxShadow1: "0px 0px 57.2px 15px rgba(29, 21, 18, 0.05)",

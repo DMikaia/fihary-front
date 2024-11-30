@@ -32,8 +32,8 @@ const OrderCard: FC<OrderTypes> = ({ orderItem, status, order_ticket }): JSX.Ele
                 ))}
             </CardContent>
             <CardFooter className="p-0 flex gap-3">
-                <Button className="bg-[#BEBEBE] rounded-xl h-[40px] w-full">Retourner</Button>
-                <Button className="bg-primary-foreground rounded-xl h-[40px] w-full">Confirmer</Button>
+                <Button className="bg-[#BEBEBE] hover:bg-[#BEBEBE]/60 rounded-xl h-[40px] w-full">Retourner</Button>
+                <Button className="bg-primary-foreground hover:bg-primary-foreground/75 rounded-xl h-[40px] w-full">Confirmer</Button>
             </CardFooter>
         </Card>
     );

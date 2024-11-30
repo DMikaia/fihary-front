@@ -9,7 +9,7 @@ export default function AdminNav() {
   const pathName = usePathname();
 
   return (
-    <nav className="min-h-screen bg-[#F5F5F5] py-12 px-8 w-[280px] hidden lg:flex fixed top-0">
+    <nav className="min-h-screen bg-[#F5F5F5] py-12 px-8 w-[260px] xl:w-[280px] hidden lg:flex fixed top-0">
       <div className="mx-auto container w-full h-full flex flex-col gap-16">
         <Image
           src={"/icons/logo-2.svg"}
