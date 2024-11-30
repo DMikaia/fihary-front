@@ -84,6 +84,15 @@ interface OrderItemTypes {
   unity: string;
 }
 
+interface Stock {
+  name: string;
+  description: string;
+  img: string;
+  quantity: number;
+  price: number;
+  unit: string;
+}
+
 export type {
   LandingNav,
   LoginSlider,
@@ -97,4 +106,5 @@ export type {
   GeneralStatistics,
   Notification,
   OrderTypes,
+  Stock,
 };
