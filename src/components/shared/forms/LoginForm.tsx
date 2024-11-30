@@ -14,10 +14,13 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import authServices from "@/services/auth.services";
+import { useToast } from "@/hooks/use-toast";
 
 export default function LoginForm() {
   const [loading, setLoading] = useState<boolean>(false);
   const [show, setShow] = useState<boolean>(false);
+  const { toast } = useToast();
   const form = useForm<LoginFormSchema>({
     resolver: zodResolver(loginFormSchema),
     defaultValues: {
@@ -26,12 +29,24 @@ export default function LoginForm() {
     },
   });
 
-  const handleSubmit = (data: LoginFormSchema) => {
+  const handleSubmit = async (data: LoginFormSchema) => {
     setLoading(true);
+    const loginResponse = await authServices.userLogin(data);
 
-    console.log(data);
+    if (loginResponse.status === 200) {
+      console.log(loginResponse.rest);
+      toast({
+        title: " Utilisateur authentifié avec succés!"
+      })
+    }
+    else {
+      toast({
+        title: "Un erreur s'est produit!",
+        variant: "destructive"
+      })
+    }
 
-    // setLoading(false);
+    setLoading(false);
   };
 
   return (

@@ -84,6 +84,12 @@ interface OrderItemTypes {
   unity: string;
 }
 
+interface Response<T> {
+  status: 200 | 400 | 500 | 401;
+  message?: string;
+  rest?: T;
+}
+
 export type {
   LandingNav,
   LoginSlider,
@@ -97,4 +103,5 @@ export type {
   GeneralStatistics,
   Notification,
   OrderTypes,
+  Response,
 };

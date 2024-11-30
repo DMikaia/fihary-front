@@ -143,8 +143,8 @@ const ADMIN_NAV: AdminNav[] = [
     imgActive: "/icons/product-active.svg",
   },
   {
-    label: "Utilisateurs",
-    url: "/admin/users",
+    label: "Box de proximité",
+    url: "/admin/box",
     img: "/icons/user.svg",
     imgActive: "/icons/user-active.svg",
   },
@@ -156,6 +156,8 @@ const ADMIN_NAV: AdminNav[] = [
   },
 ];
 
+const NODE_BACK_URL = "http://192.168.8.187:3004/api";
+
 export {
   LANDING_NAV,
   LOGIN_SLIDERS,
@@ -165,4 +167,5 @@ export {
   FOOTER_OTHERS,
   FOOTER_SOCIALS,
   ADMIN_NAV,
+  NODE_BACK_URL,
 };

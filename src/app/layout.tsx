@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import type { Metadata } from "next";
 import "./globals.css";
 import StoreProvider from "../providers/StoreProvider";
+import { Toaster } from "@/components/ui/toaster";
 
 const workSans = localFont({
   src: "./fonts/WorkSans.ttf",
@@ -37,7 +38,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <StoreProvider>{children}</StoreProvider>
+          <StoreProvider>
+            {children}
+            <Toaster />
+          </StoreProvider>
         </ThemeProvider>
       </body>
     </html>
