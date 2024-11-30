@@ -1,3 +1,5 @@
+"use client"
+
 import DashboardLeft from "@/components/section/admin/dashboard/DashboardLeft";
 
 export default function Admin() {

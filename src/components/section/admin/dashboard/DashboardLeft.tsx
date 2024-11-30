@@ -1,3 +1,5 @@
+"use client"
+
 import { generalStatistics } from "@/constants/__mock__/adminMock";
 import StatCard from "@/components/shared/cards/StatCard";
 import BoxSells from "./components/BoxSells";
