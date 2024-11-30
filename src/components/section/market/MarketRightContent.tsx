@@ -20,7 +20,7 @@ export default function MarketRightContent() {
   const [show, setShow] = useState<boolean>(false);
 
   return (
-    <div className="market__right flex flex-col gap-4 flex-1 w-full px-8">
+    <div className="market__right flex flex-col gap-4 flex-1 w-full lg:px-6">
       <div className="w-full flex items-center justify-end gap-4">
         <Input
           value={search}
