@@ -8,7 +8,7 @@ type AdminProps = {
   children: ReactNode;
 };
 
-const MarketplaceLayout: FC<AdminProps> = ({ children }): JSX.Element => {
+const AdminLayout: FC<AdminProps> = ({ children }): JSX.Element => {
   return (
     <section className="admin w-full overflow-hidden flex min-h-screen">
       <AdminNav />
@@ -26,4 +26,4 @@ const MarketplaceLayout: FC<AdminProps> = ({ children }): JSX.Element => {
   );
 };
 
-export default MarketplaceLayout;
+export default AdminLayout;

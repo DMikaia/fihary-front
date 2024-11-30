@@ -29,7 +29,7 @@ const chartData = [
 const chartConfig = {
   ammount: {
     label: "Montant",
-    color: "hsl(var(--chart-1))",
+    color: "#2A9D90",
   },
 } satisfies ChartConfig;
 

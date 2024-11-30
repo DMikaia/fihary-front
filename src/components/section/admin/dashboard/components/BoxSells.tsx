@@ -11,12 +11,21 @@ export default function BoxSells() {
     slidesToScroll: 2,
     slidesToShow: 2,
     infinite: false,
+    responsive: [
+      {
+        breakpoint: 450,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
     <div className="box__monitoring w-full">
       <div className="w-full flex justify-between items-center">
-        <h2 className="text-lg font-semibold inter-tight text-secondary">Monitoring des box</h2>
+        <h2 className="inter-tight text-secondary">Monitoring des box</h2>
         <Link href={"#"} className="flex gap-2 items-center">
           <p className="text-md text-primary-foreground">Afficher tout</p>
           <Image

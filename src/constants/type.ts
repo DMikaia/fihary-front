@@ -61,6 +61,12 @@ interface GeneralStatistics {
   sells: number;
 }
 
+type Notification = {
+  title: string;
+  description: string;
+  type: "good" | "bad" | "neutral";
+};
+
 interface OrderTypes {
   total_amout?: number;
   status: string;
@@ -89,5 +95,6 @@ export type {
   FooterLink,
   AdminNav,
   GeneralStatistics,
+  Notification,
   OrderTypes,
 };
