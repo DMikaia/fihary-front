@@ -13,11 +13,7 @@ const AdminLayout: FC<AdminProps> = ({ children }): JSX.Element => {
     <section className="admin w-full overflow-hidden flex min-h-screen">
       <AdminNav />
 
-<<<<<<< HEAD
       <div className="lg:ml-[260px] xl:ml-[280px] flex flex-col gap-8 py-8 w-full lg:w-[calc(100%-280px)] lx:w-[calc(100%-280px)]">
-=======
-      <div className="lg:ml-[260px] xl:ml-[280px] flex flex-col gap-8 py-8 w-full lg:w-[calc(100%-280px)]">
->>>>>>> origin/develop
         <AdminHeader />
 
         <div className="w-full px-6 md:px-8">

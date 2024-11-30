@@ -2,7 +2,7 @@
 
 import InprogressOrder from "@/app/admin/order/InprogressOrder";
 import StatCard from "@/components/shared/cards/StatCard";
-import { generalStatistics } from "@/constants/__mock__/adminMock";
+import { GERNERAL_STAT } from "@/constants/__mock__/adminMock";
 import { FC } from "react";
 
 const OrderLeft: FC = (): JSX.Element => {
@@ -13,7 +13,7 @@ const OrderLeft: FC = (): JSX.Element => {
                     icon="/icons/shopping-cart.svg"
                     id={1}
                     title="Commandes en cours"
-                    data={generalStatistics.orders}
+                    data={GERNERAL_STAT.orders}
                     className="bg-[#FFC10726]"
                 />
 
@@ -21,7 +21,7 @@ const OrderLeft: FC = (): JSX.Element => {
                     icon="/icons/user-2.svg"
                     id={2}
                     title="Box actifs"
-                    data={generalStatistics.activeBox}
+                    data={GERNERAL_STAT.activeBox}
                     className="bg-[#FF3D0026]"
                 />
 
@@ -29,7 +29,7 @@ const OrderLeft: FC = (): JSX.Element => {
                     icon="/icons/shopping-cart-2.svg"
                     id={3}
                     title="Vente réalisée"
-                    data={generalStatistics.orders}
+                    data={GERNERAL_STAT.orders}
                     className="bg-[#2A9D9026]"
                 />
             </div>

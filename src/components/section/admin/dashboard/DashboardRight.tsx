@@ -1,4 +1,4 @@
-import AdminNotification from "./components/Notification";
+import AdminNotification from "../components/Notification";
 import { GeneralChart } from "./components/Radar";
 
 export default function DashboardRight() {
