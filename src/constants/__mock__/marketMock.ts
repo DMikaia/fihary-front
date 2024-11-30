@@ -1,4 +1,4 @@
-import { MarketProduct } from "../type";
+import { MarketOrder, MarketProduct } from "../type";
 
 const MARKET_PRODUCT_MOCK: MarketProduct[] = [
   {
@@ -39,4 +39,21 @@ const MARKET_PRODUCT_MOCK: MarketProduct[] = [
   },
 ];
 
-export { MARKET_PRODUCT_MOCK };
+const MARKET_ORDER_MOCK: MarketOrder[] = [
+  {
+    name: "Anandrano",
+    price: 500,
+    imgUrl: "/img/mockData/market-product-2.png",
+    unit: "botte",
+    quantity: 1,
+  },
+  {
+    name: "Pastèque",
+    price: 2500,
+    imgUrl: "/img/mockData/market-product-3.png",
+    unit: "unité",
+    quantity: 1,
+  },
+];
+
+export { MARKET_PRODUCT_MOCK, MARKET_ORDER_MOCK };
