@@ -79,6 +79,11 @@ body {
   border: none;
 }
 
+ .slick-list, .slick-track {
+  min-height: 100vh;
+  height: 100%;
+}
+
 body {
   background-color: #FBFDF7;
 }
