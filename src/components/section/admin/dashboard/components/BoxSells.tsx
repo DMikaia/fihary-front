@@ -8,8 +8,8 @@ import Slider from "react-slick";
 export default function BoxSells() {
   const settings = {
     speed: 400,
-    slidesToScroll: 3,
-    slidesToShow: 3,
+    slidesToScroll: 2,
+    slidesToShow: 2,
     infinite: false,
   };
 
@@ -30,7 +30,7 @@ export default function BoxSells() {
 
       <Slider {...settings} className="flex gap-4">
         {[0, 1, 2, 3, 4, 5].map((item) => (
-          <SellsChart key={item} id={item} />
+          <SellsChart key={item} id={item} last={5} />
         ))}
       </Slider>
     </div>

@@ -35,11 +35,14 @@ const chartConfig = {
 
 interface Props {
   id: number;
+  last: number;
 }
 
-export function SellsChart({ id }: Props) {
+export function SellsChart({ id, last }: Props) {
   return (
-    <Card>
+    <Card
+      className={`${id === 0 ? "ml-0" : ""} ${id === last ? "mr-0" : ""} mx-4`}
+    >
       <CardHeader>
         <CardTitle>BOX{id}</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
