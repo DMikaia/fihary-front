@@ -16,7 +16,7 @@ export default function AdminHeader() {
   const { isOpen } = useSelector((state: RootState) => state.nav);
 
   return (
-    <div className="h-9">
+    <div className="h-9 w-full">
       <header className="w-full px-6 md:px-8 flex justify-between items-center">
         <Button
           variant={"ghost"}

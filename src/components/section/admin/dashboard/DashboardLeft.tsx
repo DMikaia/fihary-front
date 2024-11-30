@@ -5,7 +5,7 @@ import Remainder from "./components/Remainder";
 
 export default function DashboardLeft() {
   return (
-    <div className="admin__dashboard__left w-[60%] flex flex-col gap-10">
+    <div className="admin__dashboard__left w-[75%] flex flex-col gap-10">
       <div className="general__stat w-full grid lg:grid-cols-3 gap-6">
         <StatCard
           icon="/icons/shopping-cart.svg"

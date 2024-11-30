@@ -24,11 +24,10 @@ export default function AdminNav() {
             <Link
               key={id}
               href={item.url}
-              className={`w-full h-fit flex gap-2 items-center px-4 py-2 rounded-lg hover:bg-primary-foreground duration-200 ease-linear ${
-                item.url === pathName
+              className={`w-full h-fit flex gap-2 items-center px-4 py-2 rounded-lg hover:bg-primary-foreground duration-200 ease-linear ${item.url === pathName
                   ? "bg-primary-foreground"
                   : "bg-transparent"
-              }`}
+                }`}
             >
               <Image
                 src={item.url === pathName ? item.imgActive : item.img}
