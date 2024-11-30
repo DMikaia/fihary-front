@@ -142,9 +142,43 @@ const STOCK_MOCK_DATA = [
   },
 ];
 
+const BOX_MOCK_DATA = [
+  {
+    id: "BOX015",
+    location: "Ankadifotsy",
+    login: "ef524",
+    phone: "034 87 167 15",
+  },
+  {
+    id: "BOX016",
+    location: "Antanimena",
+    login: "ef574",
+    phone: "034 07 167 15",
+  },
+  {
+    id: "BOX017",
+    location: "Mahazo",
+    login: "ef524",
+    phone: "034 87 789 45",
+  },
+  {
+    id: "BOX018",
+    location: "Alarobia",
+    login: "ef532",
+    phone: "034 87 879 15",
+  },
+  {
+    id: "BOX019",
+    location: "Ankadifotsy",
+    login: "ef503",
+    phone: "032 21 258 15",
+  },
+];
+
 export {
   GERNERAL_STAT,
   ADMIN_NOTIFICATIONS,
   OrderInProgressMock,
   STOCK_MOCK_DATA,
+  BOX_MOCK_DATA,
 };

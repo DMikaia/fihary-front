@@ -93,6 +93,13 @@ interface Stock {
   unit: string;
 }
 
+type Box = {
+  id: string;
+  location: string;
+  login: string;
+  phone: string;
+};
+
 export type {
   LandingNav,
   LoginSlider,
@@ -107,4 +114,5 @@ export type {
   Notification,
   OrderTypes,
   Stock,
+  Box,
 };

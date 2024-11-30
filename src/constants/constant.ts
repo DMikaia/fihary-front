@@ -143,7 +143,7 @@ const ADMIN_NAV: AdminNav[] = [
     imgActive: "/icons/product-active.svg",
   },
   {
-    label: "Utilisateurs",
+    label: "Box de proximité",
     url: "/admin/users",
     img: "/icons/user.svg",
     imgActive: "/icons/user-active.svg",
