@@ -123,4 +123,28 @@ const OrderInProgressMock: OrderTypes[] = [
   },
 ];
 
-export { GERNERAL_STAT, ADMIN_NOTIFICATIONS, OrderInProgressMock };
+const STOCK_MOCK_DATA = [
+  {
+    name: "Carrotes",
+    description: "EL carote",
+    img: "/img/mockdata/market-product-4.png",
+    quantity: 35,
+    price: 1500,
+    unit: "kg",
+  },
+  {
+    name: "Vary manalalondo",
+    description: "Riz rouge",
+    img: "/img/mockdata/market-product-1.png",
+    quantity: 2500,
+    price: 3500,
+    unit: "kg",
+  },
+];
+
+export {
+  GERNERAL_STAT,
+  ADMIN_NOTIFICATIONS,
+  OrderInProgressMock,
+  STOCK_MOCK_DATA,
+};
