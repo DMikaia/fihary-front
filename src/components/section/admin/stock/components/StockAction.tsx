@@ -1,7 +1,9 @@
 "use client";
 
-import { Input } from "@/components/ui/input";
+import StockDialog from "@/components/shared/dialogs/StockDIalog";
+import { Plus, RotateCcw, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
@@ -10,7 +12,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useState } from "react";
-import { Plus, RotateCcw, Search } from "lucide-react";
 
 export default function StockAction() {
   const [search, setSearch] = useState<string>("");
@@ -19,10 +20,7 @@ export default function StockAction() {
 
   return (
     <div className="flex flex-col gap-4 items-end">
-      <Button className="flex gap-2 px-6 items-center w-fit">
-        <Plus size={16} className="text-white" />
-        <p>Ajouter</p>
-      </Button>
+      <StockDialog />
 
       <div className="flex gap-4 items-center">
         <Input
