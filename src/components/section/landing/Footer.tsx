@@ -22,11 +22,13 @@ export default function Footer() {
     return null;
   }
   return (
-    <footer className="w-full overflow-x-hidden px-6 md:px-12 lg:px-24 py-8 bg-white dark:bg-darkBackground mt-20 pt-14">
+    <footer className="w-full overflow-x-hidden px-6 md:px-24 lg:px-48 py-8 bg-white dark:bg-darkBackground mt-20 pt-14">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full justify-between items-start">
         <div className="flex flex-col gap-4">
           <Image
-            src={theme === "dark" ? "/icons/logo-dark.svg" : "/icons/logo-2.svg"}
+            src={
+              theme === "dark" ? "/icons/logo-dark.svg" : "/icons/logo-2.svg"
+            }
             width={112}
             height={31}
             alt="Logo of Fihary"
