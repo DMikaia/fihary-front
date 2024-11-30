@@ -16,7 +16,7 @@ export default function AdminNavResponsive({
 }: AdminProps) {
   return (
     <nav
-      className={`min-h-screen bg-[#F5F5F5] h-[calc(100vh_-_100px)] max-w-[290px] md:max-w-[350px] top-[100px] block w-full fixed left-0 px-6 md:px-8 py-12 z-50 ${
+      className={`min-h-screen bg-[#F5F5F5] h-[calc(100vh_-_100px)] max-w-[290px] md:max-w-[350px] top-[100px] block lg:hidden w-full fixed left-0 px-6 md:px-8 py-12 z-50 ${
         isOpen
           ? "gap-0 p-0 ease-out duration-200 left-0"
           : "gap-8 p-8 ease-in duration-200 left-[-100%]"

@@ -17,7 +17,11 @@ export default function StatCard({
   className,
 }: StatProps) {
   return (
-    <Card className="flex flex-col items-start gap-4 p-4">
+    <Card
+      className={`flex flex-col items-start gap-4 p-4 ${
+        id === 3 ? "sm:col-span-2 md:col-span-1" : ""
+      }`}
+    >
       <p className="text-secondary-2/75 text-sm border border-gray rounded-xl">
         {title}
       </p>
@@ -26,7 +30,9 @@ export default function StatCard({
           <Image src={icon} width={24} height={24} alt={`stat_card_${id}`} />
         </div>
 
-        <h1 className="text-2xl mdtext-3xl font-semibold inter-tight">{data}</h1>
+        <h1 className="text-2xl mdtext-3xl font-semibold inter-tight">
+          {data}
+        </h1>
       </CardContent>
     </Card>
   );
