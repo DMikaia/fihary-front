@@ -131,6 +131,12 @@ const ADMIN_NAV: AdminNav[] = [
     imgActive: "/icons/dashboard-active.svg",
   },
   {
+    label: "Commande",
+    url: "/admin/order",
+    img: "/icons/box.svg",
+    imgActive: "/icons/box-active.svg",
+  },
+  {
     label: "Produits",
     url: "/admin/products",
     img: "/icons/product.svg",

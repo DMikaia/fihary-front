@@ -1,6 +1,7 @@
 import { generalStatistics } from "@/constants/__mock__/adminMock";
 import StatCard from "@/components/shared/cards/StatCard";
 import BoxSells from "./components/BoxSells";
+import Remainder from "./components/Remainder";
 
 export default function DashboardLeft() {
   return (
@@ -32,6 +33,8 @@ export default function DashboardLeft() {
       </div>
 
       <BoxSells />
+
+      <Remainder />
     </div>
   );
 }
