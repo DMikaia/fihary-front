@@ -11,7 +11,7 @@ const MarketCategories: FC = (): JSX.Element => {
             <div className="categories__content mt-4 flex flex-col gap-3">
                 {MARKET_CATEGORIES.map((category, index) => (
                     <div className="checkbox flex items-center gap-2" key={index}>
-                        <Checkbox id={category.id} />
+                        <Checkbox id={category.id} className="dark:border dark:border-white" />
                         <label
                             htmlFor={category.id}
                             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"

@@ -32,9 +32,9 @@ const Cart: FC = (): JSX.Element => {
           />
           <div className="flex flex-col gap-2">
             <div className="flex flex-col gap-2">
-              <h3 className="text-secondary font-semibold inter-tight">
+              <h3 className="text-secondary dark:text-white font-semibold inter-tight">
                 Anandrano{" "}
-                <span className="text-secondary/70 font-medium text-sm inter-tight">
+                <span className="text-secondary/70 dark:text-white font-medium text-sm inter-tight">
                   (500 Ar/botte)
                 </span>
               </h3>
@@ -46,7 +46,7 @@ const Cart: FC = (): JSX.Element => {
                 >
                   <Minus size={16} />
                 </Button>
-                <p className="text-secondary">1</p>
+                <p className="text-secondary dark:text-white">1</p>
                 <Button
                   // onClick={() => dispatch(increase(index))}
                   variant={"ghost"}
