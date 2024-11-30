@@ -6,7 +6,7 @@ import Remainder from "./components/Remainder";
 export default function DashboardLeft() {
   return (
     <div className="admin__dashboard__left w-full lg:w-[65%] flex flex-col gap-10">
-      <div className="general__stat w-full grid lg:grid-cols-3 gap-6">
+      <div className="general__stat w-full grid sm:grid-cols-2 md:grid-cols-3 gap-6">
         <StatCard
           icon="/icons/shopping-cart.svg"
           id={1}
