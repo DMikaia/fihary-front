@@ -80,7 +80,7 @@ export default function OrderDialog({ total }: OrderProps) {
         </div>
 
         <hr className="bg-secondary-2 w-full" />
-
+          
         <OrderForm total={total} />
       </DialogContent>
     </Dialog>
