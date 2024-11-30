@@ -6,7 +6,7 @@ export default function AdminNotification() {
     <div className="p-4 rounded-xl bg-white shadow border h-full">
       <p className="text-[#616161] font-semibold">Notifications</p>
 
-      <ul className="flex flex-col pl-4 gap-4 mt-4 inter-tight">
+      <ul className="flex flex-col gap-4 mt-4 inter-tight">
         {ADMIN_NOTIFICATIONS.map((item, id) => (
           <li key={id} className={`flex items-center px-2 gap-4`}>
             <div
@@ -16,7 +16,7 @@ export default function AdminNotification() {
 
             <div className="flex-1">
               <h1>{item.title}</h1>
-              <p className="text-muted-foreground">{item.description}</p>
+              <p className="text-muted-foreground text-sm">{item.description}</p>
             </div>
           </li>
         ))}

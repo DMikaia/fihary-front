@@ -1,13 +1,13 @@
 "use client"
 
-import InprogressOrder from "@/app/admin/order/InprogressOrder";
+import InprogressOrder from "@/components/section/admin/order/components/InprogressOrder";
 import StatCard from "@/components/shared/cards/StatCard";
 import { GERNERAL_STAT } from "@/constants/__mock__/adminMock";
 import { FC } from "react";
 
 const OrderLeft: FC = (): JSX.Element => {
     return (
-        <div className="admin__order__left w-full xl:w-[75%] flex flex-col gap-10">
+        <div className="admin__order__left w-full xl:w-[70%] flex flex-col gap-10">
             <div className="general__stat w-full grid sm2:grid-cols-2 lg:grid-cols-3 gap-6">
                 <StatCard
                     icon="/icons/shopping-cart.svg"
