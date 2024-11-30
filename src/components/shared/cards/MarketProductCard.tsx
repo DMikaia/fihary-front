@@ -26,7 +26,7 @@ export default function MarketProductCard({
       <CardContent className="flex justify-between items-center w-full">
         <div>
           <h1 className="text-base lg:text-lg font-semibold">{name}</h1>
-          <p className="text-sm md:text-base">
+          <p className="text-sm md:text-base inter-tight">
             {price} Ar/{unit}
           </p>
         </div>

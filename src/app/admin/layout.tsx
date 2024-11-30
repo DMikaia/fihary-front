@@ -1,0 +1,29 @@
+"use client";
+
+import AdminHeader from "@/components/shared/headers/AdminHeader";
+import AdminNav from "@/components/shared/navbars/AdminNav";
+import { FC, ReactNode } from "react";
+
+type AdminProps = {
+  children: ReactNode;
+};
+
+const MarketplaceLayout: FC<AdminProps> = ({ children }): JSX.Element => {
+  return (
+    <section className="admin w-full overflow-hidden flex min-h-screen">
+      <AdminNav />
+
+      <div className="w-full lg:ml-[280px] flex flex-col gap-8 py-8">
+        <AdminHeader />
+
+        <div className="w-full px-6 md:px-8">
+          <hr className="bg-gray w-full" />
+        </div>
+
+        {children}
+      </div>
+    </section>
+  );
+};
+
+export default MarketplaceLayout;

@@ -1,5 +1,6 @@
 import {
   AccordionTypes,
+  AdminNav,
   FooterLink,
   LandingNav,
   LoginSlider,
@@ -122,6 +123,33 @@ const FOOTER_SOCIALS = [
   },
 ];
 
+const ADMIN_NAV: AdminNav[] = [
+  {
+    label: "Dashboard",
+    url: "/admin/dashboard",
+    img: "/icons/dashboard.svg",
+    imgActive: "/icons/dashboard-active.svg",
+  },
+  {
+    label: "Produits",
+    url: "/admin/products",
+    img: "/icons/product.svg",
+    imgActive: "/icons/product-active.svg",
+  },
+  {
+    label: "Utilisateurs",
+    url: "/admin/users",
+    img: "/icons/user.svg",
+    imgActive: "/icons/user-active.svg",
+  },
+  {
+    label: "Paramètres",
+    url: "/admin/settings",
+    img: "/icons/setting.svg",
+    imgActive: "/icons/setting-active.svg",
+  },
+];
+
 export {
   LANDING_NAV,
   LOGIN_SLIDERS,
@@ -130,4 +158,5 @@ export {
   FOOTER_LINKS,
   FOOTER_OTHERS,
   FOOTER_SOCIALS,
+  ADMIN_NAV,
 };

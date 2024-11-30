@@ -56,27 +56,28 @@ export default function UserPlaceNav() {
                             ))}
                         </div>
                     </div>
-
                     <UserSearchForm />
-
                     <div className="hidden lg:flex gap-4 items-center justify-center">
                         <Button variant={"ghost"}>Se connecter</Button>
                         <Button className="text-white">S&apos;inscrire</Button>
                         <ThemeSwitch />
                     </div>
 
-                    <Button
-                        variant={"ghost"}
-                        className="block lg:hidden bg-transparent hover:bg-transparent w-fit h-fit p-1 rounded-lg"
-                        onClick={() => dispatch(toggleNav())}
-                    >
-                        <Image
-                            src={"/icons/menu.svg"}
-                            width={20}
-                            height={20}
-                            alt="Menu icon"
-                        />
-                    </Button>
+                    <div className="flex items-center gap-3 lg:hidden">
+                        <Button
+                            variant={"ghost"}
+                            className="block lg:hidden bg-transparent hover:bg-transparent w-fit h-fit p-1 rounded-lg"
+                            onClick={() => dispatch(toggleNav())}
+                        >
+                            <Image
+                                src={"/icons/menu.svg"}
+                                width={20}
+                                height={20}
+                                alt="Menu icon"
+                            />
+                        </Button>
+                        <ThemeSwitch />
+                    </div>
                 </div>
             </nav>
 
