@@ -144,7 +144,7 @@ const ADMIN_NAV: AdminNav[] = [
   },
   {
     label: "Box de proximité",
-    url: "/admin/users",
+    url: "/admin/box",
     img: "/icons/user.svg",
     imgActive: "/icons/user-active.svg",
   },
@@ -156,7 +156,8 @@ const ADMIN_NAV: AdminNav[] = [
   },
 ];
 
-const LOCAL_SERVER_URL = "http://192.168.8.187:3003/";
+const NODE_BACK_URL = "http://192.168.8.187:3004/api";
+const FLASK_BACK_URL = "http://localhost:5000";
 
 export {
   LANDING_NAV,
@@ -167,5 +168,6 @@ export {
   FOOTER_OTHERS,
   FOOTER_SOCIALS,
   ADMIN_NAV,
-  LOCAL_SERVER_URL,
+  NODE_BACK_URL,
+  FLASK_BACK_URL,
 };

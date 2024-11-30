@@ -14,9 +14,12 @@ import {
     FormLabel,
     FormMessage,
 } from "@/components/ui/form";
+import { useToast } from "@/hooks/use-toast";
+import authServices from "@/services/auth.services";
 
 export default function SignupForm() {
     const [loading, setLoading] = useState<boolean>(false);
+    const { toast } = useToast();
     const [show, setShow] = useState<boolean>(false);
     const form = useForm<SignupFormSchema>({
         resolver: zodResolver(signupFormSchema),
@@ -24,16 +27,28 @@ export default function SignupForm() {
             email: "",
             password: "",
             fullname: "",
-            mobilenumber: ""
+            phone_number: ""
         },
     });
 
-    const handleSubmit = (data: SignupFormSchema) => {
+    const handleSubmit = async (data: SignupFormSchema) => {
         setLoading(true);
+        const signupResponse = await authServices.userSignup(data);
 
-        console.log(data);
+        if (signupResponse.status === 200) {
+            toast({
+                title: "Compte créé avec succés!",
+            })
+        }
+        else {
+            toast({
+                title: "Un erreur s'est produit!",
+                description: "Veuillez valider les données entrées",
+                variant: "destructive"
+            })
+        }
 
-        // setLoading(false);
+        setLoading(false);
     };
 
     return (
@@ -80,7 +95,7 @@ export default function SignupForm() {
                 />
                 <FormField
                     control={form.control}
-                    name="email"
+                    name="phone_number"
                     render={({ field }) => (
                         <FormItem className="w-full">
                             <FormLabel className="text-base">Numéro mobile</FormLabel>
@@ -135,7 +150,7 @@ export default function SignupForm() {
                     type="submit"
                     disabled={loading}
                 >
-                    {loading ? "Connexion en cours..." : "Se connecter"}
+                    {loading ? "Création du compte..." : "Créér un compte"}
                 </Button>
             </form>
         </FormProvider>

@@ -9,7 +9,7 @@ const loginFormSchema = z.object({
 
 const signupFormSchema = z.object({
   fullname: z.string().min(8, { message: "Nom complet" }),
-  mobilenumber: z
+  phone_number: z
     .string()
     .min(8, { message: "Le numéro mobile doit être 10 chiffres" }),
   email: z.string().email({ message: "Email invalide" }),
@@ -25,6 +25,14 @@ const orderFormSchema = z.object({
   location: z.string().min(8, { message: "Une adresse est requise" }),
 });
 
+const adminFormSchema = z.object({
+  ref: z.string().min(8, { message: "Le champ ref requis" }),
+  email: z.string().email({ message: "Email invalide" }),
+  password: z
+    .string()
+    .min(8, { message: "Le mot de passe doit être au moins 8 caractères" }),
+})
+
 const stockFormSchema = z.object({
   name: z.string().min(8, "Le nom du produit doit être au mois 8 caractères"),
   description: z
@@ -38,12 +46,14 @@ const stockFormSchema = z.object({
 type LoginFormSchema = z.infer<typeof loginFormSchema>;
 type SignupFormSchema = z.infer<typeof signupFormSchema>;
 type OrderFormSchema = z.infer<typeof orderFormSchema>;
+type AdminFormSchema = z.infer<typeof adminFormSchema>;
 type StockFormSchema = z.infer<typeof stockFormSchema>;
 
 export type {
   LoginFormSchema,
   SignupFormSchema,
   OrderFormSchema,
-  StockFormSchema,
+  AdminFormSchema,
 };
-export { loginFormSchema, signupFormSchema, orderFormSchema, stockFormSchema };
+export { loginFormSchema, signupFormSchema, orderFormSchema, adminFormSchema, stockFormSchema };
+

@@ -84,6 +84,12 @@ interface OrderItemTypes {
   unity: string;
 }
 
+interface Response<T> {
+  status: 200 | 400 | 500 | 401;
+  message?: string;
+  rest?: T;
+}
+
 interface Stock {
   name: string;
   description: string;
@@ -119,6 +125,7 @@ export type {
   GeneralStatistics,
   Notification,
   OrderTypes,
+  Response,
   Stock,
   Box,
   Response,
