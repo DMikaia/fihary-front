@@ -17,8 +17,7 @@ export default function LoginSlider() {
         <div
           key={index}
           className={cn(
-            `slide__${index + 1} ${
-              index + 1 === 1 ? "bg-slider-1" : "bg-slider-2"
+            `slide__${index + 1} ${index + 1 === 1 ? "bg-slider-1" : "bg-slider-2"
             }  bg-cover bg-center min-h-screen w-full`
           )}
         >

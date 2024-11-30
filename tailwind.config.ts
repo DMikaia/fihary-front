@@ -88,6 +88,10 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        "slider-1": "url('/img/login-slider-1.png')",
+        "slider-2": "url('/img/login-slider-2.png')",
+      },
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports
