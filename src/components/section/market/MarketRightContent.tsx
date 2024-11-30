@@ -50,6 +50,7 @@ export default function MarketRightContent() {
       <div className="market__products w-full grid grid-cols-1 mg:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
         {MARKET_PRODUCT_MOCK.map((item, id) => (
           <MarketProductCard
+            key={id}
             id={id}
             name={item.name}
             imgUrl={item.imgUrl}
