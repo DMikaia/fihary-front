@@ -1,6 +1,11 @@
 "use client";
 
-import { adminFormSchema, AdminFormSchema, loginFormSchema, LoginFormSchema } from "@/lib/form-validation";
+import {
+  adminFormSchema,
+  AdminFormSchema,
+  loginFormSchema,
+  LoginFormSchema,
+} from "@/lib/form-validation";
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
@@ -26,25 +31,24 @@ export default function AdminLoginForm() {
     defaultValues: {
       email: "",
       password: "",
-      ref: ""
+      ref: "",
     },
   });
 
   const handleSubmit = async (data: AdminFormSchema) => {
     setLoading(true);
-    const loginResponse = await authServices.userLogin(data);
+    const loginResponse = await authServices.adminLogin(data);
 
     if (loginResponse.status === 200) {
       toast({
-        title: " Utilisateur authentifié avec succés!"
-      })
-    }
-    else {
+        title: "Utilisateur authentifié avec succés!",
+      });
+    } else {
       toast({
         title: "Un erreur s'est produit!",
         description: "Veuillez valider les données entrées",
-        variant: "destructive"
-      })
+        variant: "destructive",
+      });
     }
 
     setLoading(false);
