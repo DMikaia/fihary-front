@@ -40,7 +40,7 @@ class AuthServices {
       });
 
       if (response.status === 200) {
-        console.log(response.data)
+        console.log(response.data);
         return {
           status: 200,
           message: "Account was created successfully!",

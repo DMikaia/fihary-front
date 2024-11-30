@@ -25,9 +25,23 @@ const orderFormSchema = z.object({
   location: z.string().min(8, { message: "Une adresse est requise" }),
 });
 
+const adminFormSchema = z.object({
+  ref: z.string().min(8, { message: "Le champ ref requis" }),
+  email: z.string().email({ message: "Email invalide" }),
+  password: z
+    .string()
+    .min(8, { message: "Le mot de passe doit être au moins 8 caractères" }),
+});
+
 type LoginFormSchema = z.infer<typeof loginFormSchema>;
 type SignupFormSchema = z.infer<typeof signupFormSchema>;
 type OrderFormSchema = z.infer<typeof orderFormSchema>;
+type AdminFormSchema = z.infer<typeof adminFormSchema>;
 
-export type { LoginFormSchema, SignupFormSchema, OrderFormSchema };
-export { loginFormSchema, signupFormSchema, orderFormSchema };
+export type {
+  LoginFormSchema,
+  SignupFormSchema,
+  OrderFormSchema,
+  AdminFormSchema,
+};
+export { loginFormSchema, signupFormSchema, orderFormSchema, adminFormSchema };

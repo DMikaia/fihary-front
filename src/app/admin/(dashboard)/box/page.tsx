@@ -5,7 +5,7 @@ import { FC } from "react";
 const Admin__box: FC = (): JSX.Element => {
     return (
         <section className="admin__box">
-            
+
         </section>
     );
 };
