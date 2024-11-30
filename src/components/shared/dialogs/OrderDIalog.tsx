@@ -25,7 +25,7 @@ export default function OrderDialog({ total }: OrderProps) {
           Confirmer - Total {total} Ar
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[432px] gap-8 h-[calc(100vh_-_16px)] 2xl:h-fit">
+      <DialogContent className="sm:max-w-[432px] gap-8 h-[544px] overflow-y-auto 2xl:h-fit">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold">
             Confirmation de commande
@@ -33,9 +33,9 @@ export default function OrderDialog({ total }: OrderProps) {
           <DialogDescription className="hidden"></DialogDescription>
         </DialogHeader>
 
-        <div className="w-full flex flex-col gap-4 max-h-[160px] overflow-y-auto">
+        <div className="w-full flex flex-col gap-4">
           {MARKET_ORDER_MOCK.map((item, id) => (
-            <div className="w-full flex justify-between items-center">
+            <div key={id} className="w-full flex justify-between items-center">
               <div className="flex gap-4 items-center">
                 <Image
                   src={item.imgUrl}
@@ -53,7 +53,7 @@ export default function OrderDialog({ total }: OrderProps) {
                 </div>
               </div>
 
-              <div className="text-right">
+              <div className="text-right flex flex-col gap-1">
                 <p>{item.price * item.quantity} Ar</p>
                 <div className="flex gap-2 items-center">
                   <Button

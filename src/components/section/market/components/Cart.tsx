@@ -1,15 +1,15 @@
 "use client";
 
-import React, { FC } from "react";
+import OrderDialog from "@/components/shared/dialogs/OrderDIalog";
 import { DotLottiePlayer } from "@dotlottie/react-player";
 import "@dotlottie/react-player/dist/index.css";
 import { Button } from "@/components/ui/button";
 import { Minus, Plus } from "lucide-react";
-import OrderDialog from "../../../shared/dialogs/OrderDIalog";
+import React, { FC } from "react";
 
 const Cart: FC = (): JSX.Element => {
   return (
-    <div className="cart my-14">
+    <div className="cart my-14 w-full">
       <header className="flex items-center gap-4">
         <h3 className="text-lg">Votre panier</h3>
         <span className="text-secondary-2 underline">Vider</span>
@@ -23,8 +23,8 @@ const Cart: FC = (): JSX.Element => {
                 />
                 <p className="text-center text-sm text-secondary-2">Votre panier est vide</p>
             </div> */}
-      <div className="cart__items mt-5">
-        <div className="item flex gap-3 items-center">
+      <div className="cart__items mt-5 w-full">
+        <div className="item flex gap-8 md:gap-3 items-center">
           <img
             src="/img/mockdata/cart-mockdata.png"
             alt="cart-item"

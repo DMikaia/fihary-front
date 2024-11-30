@@ -47,7 +47,7 @@ export default function MarketRightContent() {
         <p className="w-fit">6 produits trouvées</p>
       </div>
 
-      <div className="market__products w-full grid grid-cols-1 mg:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
+      <div className="market__products w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
         {MARKET_PRODUCT_MOCK.map((item, id) => (
           <MarketProductCard
             key={id}
