@@ -1,4 +1,4 @@
-import { LOCAL_SERVER_URL } from "../constants/constant";
+import { NODE_BACK_URL } from "../constants/constant";
 import { LoginFormSchema } from "../lib/form-validation";
 import { Response } from "../constants/type";
 import axios from "axios";
@@ -7,7 +7,7 @@ class AuthService {
   public url: string;
 
   constructor() {
-    this.url = LOCAL_SERVER_URL;
+    this.url = NODE_BACK_URL;
   }
 
   async login<T>(data: LoginFormSchema): Promise<Response<T>> {

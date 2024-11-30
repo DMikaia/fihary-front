@@ -31,7 +31,7 @@ const adminFormSchema = z.object({
   password: z
     .string()
     .min(8, { message: "Le mot de passe doit être au moins 8 caractères" }),
-})
+});
 
 const stockFormSchema = z.object({
   name: z.string().min(8, "Le nom du produit doit être au mois 8 caractères"),
@@ -54,6 +54,13 @@ export type {
   SignupFormSchema,
   OrderFormSchema,
   AdminFormSchema,
+  StockFormSchema,
 };
-export { loginFormSchema, signupFormSchema, orderFormSchema, adminFormSchema, stockFormSchema };
 
+export {
+  loginFormSchema,
+  signupFormSchema,
+  orderFormSchema,
+  adminFormSchema,
+  stockFormSchema,
+};
