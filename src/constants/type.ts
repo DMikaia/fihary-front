@@ -67,6 +67,23 @@ type Notification = {
   type: "good" | "bad" | "neutral";
 };
 
+interface OrderTypes {
+  total_amout?: number;
+  status: string;
+  created_at?: string;
+  order_ticket?: string;
+  orderItem: OrderItemTypes[];
+}
+
+interface OrderItemTypes {
+  quantity: number;
+  total_price?: string;
+  name: string;
+  created_at?: string;
+  img_url: string;
+  unity: string;
+}
+
 export type {
   LandingNav,
   LoginSlider,
@@ -79,4 +96,5 @@ export type {
   AdminNav,
   GeneralStatistics,
   Notification,
+  OrderTypes,
 };

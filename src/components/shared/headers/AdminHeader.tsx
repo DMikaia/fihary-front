@@ -17,7 +17,7 @@ export default function AdminHeader() {
 
   return (
     <div className="h-9 w-full">
-      <header className="w-full px-6 md:px-8 flex justify-between items-center">
+      <header className="w-full px-6 md:px-8 flex justify-between gap-14 items-center">
         <Button
           variant={"ghost"}
           onClick={() => dispatch(toggleNav())}
@@ -26,7 +26,7 @@ export default function AdminHeader() {
           <AlignLeft size={24} className="stroke-secondary" />
         </Button>
 
-        <h1 className="w-fit text-xl font-semibold hidden lg:block text-secondary inter-tight">
+        <h1 className="w-fit text-lg xl:text-xl font-semibold hidden lg:block text-secondary inter-tight">
           Bonjour Herifanantenana
         </h1>
 

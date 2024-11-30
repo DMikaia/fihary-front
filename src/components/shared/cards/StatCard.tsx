@@ -26,7 +26,7 @@ export default function StatCard({
           <Image src={icon} width={24} height={24} alt={`stat_card_${id}`} />
         </div>
 
-        <h1 className="text-3xl font-semibold inter-tight">{data}</h1>
+        <h1 className="text-2xl mdtext-3xl font-semibold inter-tight">{data}</h1>
       </CardContent>
     </Card>
   );

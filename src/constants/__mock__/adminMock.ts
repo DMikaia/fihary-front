@@ -1,4 +1,4 @@
-import { GeneralStatistics, Notification } from "../type";
+import { GeneralStatistics, Notification, OrderTypes } from "../type";
 
 const GERNERAL_STAT: GeneralStatistics = {
   orders: 250,
@@ -24,4 +24,103 @@ const ADMIN_NOTIFICATIONS: Notification[] = [
   },
 ];
 
-export { GERNERAL_STAT, ADMIN_NOTIFICATIONS };
+const OrderInProgressMock: OrderTypes[] = [
+  {
+    status: "En attente",
+    order_ticket: "#FE6487",
+    orderItem: [
+      {
+        quantity: 50,
+        name: "Ananandrano",
+        img_url: "/img/mockdata/market-product-2.png",
+        unity: "Kg",
+      },
+      {
+        quantity: 50,
+        name: "Riz Manalalondo",
+        img_url: "/img/mockdata/market-product-1.png",
+        unity: "Kg",
+      },
+      {
+        quantity: 50,
+        name: "Ananandrano",
+        img_url: "/img/mockdata/market-product-2.png",
+        unity: "Kg",
+      },
+    ],
+  },
+  {
+    status: "En attente",
+    order_ticket: "#DE8745",
+    orderItem: [
+      {
+        quantity: 50,
+        name: "Ananandrano",
+        img_url: "/img/mockdata/market-product-2.png",
+        unity: "Kg",
+      },
+      {
+        quantity: 50,
+        name: "Riz Manalalondo",
+        img_url: "/img/mockdata/market-product-1.png",
+        unity: "Kg",
+      },
+      {
+        quantity: 50,
+        name: "Ananandrano",
+        img_url: "/img/mockdata/market-product-2.png",
+        unity: "Kg",
+      },
+    ],
+  },
+  {
+    status: "Refusé",
+    order_ticket: "#FE64FE",
+    orderItem: [
+      {
+        quantity: 50,
+        name: "Ananandrano",
+        img_url: "/img/mockdata/market-product-2.png",
+        unity: "Kg",
+      },
+      {
+        quantity: 50,
+        name: "Riz Manalalondo",
+        img_url: "/img/mockdata/market-product-1.png",
+        unity: "Kg",
+      },
+      {
+        quantity: 50,
+        name: "Ananandrano",
+        img_url: "/img/mockdata/market-product-2.png",
+        unity: "Kg",
+      },
+    ],
+  },
+  {
+    status: "Refusé",
+    order_ticket: " #FE64FE",
+    orderItem: [
+      {
+        quantity: 50,
+        name: "Ananandrano",
+        img_url: "/img/mockdata/market-product-2.png",
+        unity: "Kg",
+      },
+      {
+        quantity: 50,
+        name: "Riz Manalalondo",
+        img_url: "/img/mockdata/market-product-1.png",
+        unity: "Kg",
+      },
+      {
+        quantity: 50,
+        name: "Ananandrano",
+        img_url: "/img/mockdata/market-product-2.png",
+        unity: "Kg",
+      },
+    ],
+  },
+];
+
+export { GERNERAL_STAT, ADMIN_NOTIFICATIONS, OrderInProgressMock };
