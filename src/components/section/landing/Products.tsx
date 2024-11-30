@@ -73,9 +73,9 @@ const Products: FC = (): JSX.Element => {
                             <AnimatedElement duration={0.5} delay={0.4} from={{ opacity: 0, x: -180 }} to={{ opacity: 1, x: 0 }}><h2 className="text-secondary dark:text-white text-2xl lg:text-3xl inter-tight max-w-[250px] lg:max-w-[300px] mt-3 md:mt-5"><b>Explorez notre </b>sélection de produits</h2></AnimatedElement>
                         </div>
                         <AnimatedElement duration={0.5} delay={1} from={{ opacity: 0, x: -180 }} to={{ opacity: 1, x: 0 }}>
-                            <Button variant="ghost" className="text-secondary w-max">
+                            <Button variant="ghost" className="text-secondary dark:text-white w-max">
                                 Afficher plus
-                                <Image alt="arrow-up-svg" height={23} width={23} src="/icons/arrow-up.svg" />
+                                <Image alt={theme === "dark" ? "arrow-up-2.svg" : "arrow-up.svg"} height={23} width={23} src="/icons/arrow-up.svg" />
                             </Button>
                         </AnimatedElement>
                     </header>

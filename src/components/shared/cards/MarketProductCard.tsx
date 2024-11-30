@@ -15,7 +15,7 @@ export default function MarketProductCard({
   unit,
 }: ProductProps & MarketProduct) {
   return (
-    <Card className="w-full group flex flex-col justify-between border-transparent hover:border-primary-foreground duration-200 ease-in-out rounded-lg overflow-x-hidden">
+    <Card className="w-full group flex flex-col justify-between border-transparent  dark:bg-darkBackground hover:border-primary-foreground duration-200 ease-in-out rounded-lg overflow-x-hidden">
       <Image
         src={imgUrl}
         alt={`product_${id}`}

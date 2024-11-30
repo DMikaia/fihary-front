@@ -8,7 +8,7 @@ const MarketLeftContent: FC = (): JSX.Element => {
   return (
     <div className="market__left w-full md:w-[280px]">
       <header className="flex items-center gap-4">
-        <h3 className="inter-tight text-2xl text-secondary">Filtres</h3>
+        <h3 className="inter-tight text-2xl text-secondary dark:text-white">Filtres</h3>
         <span className="text-secondary-2 underline">Effacer</span>
       </header>
 

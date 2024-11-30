@@ -32,7 +32,7 @@ export default function LandingNav() {
 
   return (
     <Fragment>
-      <nav className="landing__nav w-full h-[80px] fixed z-10 top-0 bg-white lg:bg-gray lg:dark:bg-background lg:absolute overflow-hidden px-6 md:px-8 py-8">
+      <nav className="landing__nav w-full h-[80px] fixed z-50 top-0 bg-white dark:bg-darkBackground lg:bg-gray lg:dark:bg-background lg:absolute overflow-hidden px-6 md:px-8 py-8">
         <div className="container mx-auto w-full flex justify-between items-center">
           <AnimatedElement from={{ opacity: 0, scale: 1.5, rotate: -50 }} to={{ opacity: 1, rotate: 0, scale: 1 }}>
             <Image
@@ -71,18 +71,21 @@ export default function LandingNav() {
             <ThemeSwitch />
           </div>
 
-          <Button
-            variant={"ghost"}
-            className="block lg:hidden bg-transparent hover:bg-transparent w-fit h-fit p-1 rounded-lg"
-            onClick={() => dispatch(toggleNav())}
-          >
-            <Image
-              src={"/icons/menu.svg"}
-              width={20}
-              height={20}
-              alt="Menu icon"
-            />
-          </Button>
+          <div className="flex items-center gap-2 lg:hidden">
+            <Button
+              variant={"ghost"}
+              className="block lg:hidden bg-transparent hover:bg-transparent w-fit h-fit p-1 rounded-lg"
+              onClick={() => dispatch(toggleNav())}
+            >
+              <Image
+                src={theme === "dark" ? "/icons/menu-white.svg" : "/icons/menu.svg"}
+                width={20}
+                height={20}
+                alt="Menu icon"
+              />
+            </Button>
+            <ThemeSwitch />
+          </div>
         </div>
       </nav>
 
