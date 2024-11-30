@@ -61,6 +61,12 @@ interface GeneralStatistics {
   sells: number;
 }
 
+type Notification = {
+  title: string;
+  description: string;
+  type: "good" | "bad" | "neutral";
+};
+
 export type {
   LandingNav,
   LoginSlider,
@@ -72,4 +78,5 @@ export type {
   FooterLink,
   AdminNav,
   GeneralStatistics,
+  Notification,
 };
