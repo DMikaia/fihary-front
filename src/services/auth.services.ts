@@ -64,11 +64,14 @@ class AuthServices {
 
   async adminLogin<T>(data: AdminFormSchema): Promise<Response<T>> {
     try {
-      const response = await axios.post(`${this.nodeURL}/auth/signup`, {
-        email: data.email,
-        password: data.password,
-        ref: data.ref,
-      });
+      const response = await axios.post(
+        `${this.nodeURL}/admin/auth/login-pass`,
+        {
+          email: data.email,
+          password: data.password,
+          ref: data.ref,
+        }
+      );
 
       if (response.status === 200) {
         console.log(response.data);
