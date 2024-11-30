@@ -2,7 +2,7 @@ import { MarketOrder, MarketProduct } from "../type";
 
 const MARKET_PRODUCT_MOCK: MarketProduct[] = [
   {
-    name: "Vary manalalondo",
+    name: "Vary",
     price: 3500,
     imgUrl: "/img/mockData/market-product-1.png",
     unit: "kg",

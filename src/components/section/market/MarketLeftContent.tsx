@@ -15,7 +15,7 @@ const MarketLeftContent: FC = (): JSX.Element => {
       <MarketCategories />
 
       <div className="prices mt-5">
-        <h3 className="text-lg">Price(5K-100K)</h3>
+        <h3 className="text-lg">Price (5K - 100K)</h3>
       </div>
 
       <Cart />
