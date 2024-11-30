@@ -35,6 +35,14 @@ interface MarketProduct {
   unit: string;
 }
 
+interface MarketOrder {
+  name: string;
+  imgUrl: string;
+  price: number;
+  unit: string;
+  quantity: number;
+}
+
 export type {
   LandingNav,
   LoginSlider,
@@ -42,4 +50,5 @@ export type {
   LandingProductTypes,
   MarketCategoryTypes,
   MarketProduct,
+  MarketOrder,
 };
