@@ -1,4 +1,9 @@
-import { AccordionTypes, LandingNav, LoginSlider } from "./type";
+import {
+  AccordionTypes,
+  LandingNav,
+  LoginSlider,
+  MarketCategoryTypes,
+} from "./type";
 
 const loginSliders: LoginSlider[] = [
   {
@@ -53,4 +58,19 @@ const ACCORDION_DATA: AccordionTypes[] = [
   },
 ];
 
-export { loginSliders, landingNav, ACCORDION_DATA };
+const MARKET_CATEGORIES: MarketCategoryTypes[] = [
+  {
+    id: "fruits",
+    label: "Fruits",
+  },
+  {
+    id: "vegetables",
+    label: "Légumes",
+  },
+  {
+    id: "epices",
+    label: "Epices",
+  },
+];
+
+export { loginSliders, landingNav, ACCORDION_DATA, MARKET_CATEGORIES };
