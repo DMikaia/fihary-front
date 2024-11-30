@@ -100,6 +100,12 @@ type Box = {
   phone: string;
 };
 
+interface Response<T> {
+  status: 200 | 400 | 401 | 500;
+  message?: string;
+  data?: T;
+}
+
 export type {
   LandingNav,
   LoginSlider,
@@ -115,4 +121,5 @@ export type {
   OrderTypes,
   Stock,
   Box,
+  Response,
 };

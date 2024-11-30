@@ -156,6 +156,8 @@ const ADMIN_NAV: AdminNav[] = [
   },
 ];
 
+const LOCAL_SERVER_URL = "http://192.168.8.187:3003/";
+
 export {
   LANDING_NAV,
   LOGIN_SLIDERS,
@@ -165,4 +167,5 @@ export {
   FOOTER_OTHERS,
   FOOTER_SOCIALS,
   ADMIN_NAV,
+  LOCAL_SERVER_URL,
 };
