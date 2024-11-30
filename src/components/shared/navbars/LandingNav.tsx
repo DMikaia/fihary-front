@@ -3,7 +3,7 @@
 import LandingNavResponsive from "./components/LandingNavResponsive";
 import { toggleNav } from "@/lib/redux/slices/nav-slice";
 import { useDispatch, useSelector } from "react-redux";
-import { landingNav } from "@/constants/constant";
+import { LANDING_NAV } from "@/constants/constant";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
 import { RootState } from "@/lib/redux/store";
@@ -29,12 +29,15 @@ export default function LandingNav() {
           />
 
           <div className="hidden lg:flex justify-center items-center gap-8">
-            {landingNav.map((item, index) => (
+            {LANDING_NAV.map((item, index) => (
               <Link
                 key={index}
                 href={item.url}
-                className={`${pathName === item.url ? "text-primary-foreground" : "text-secondary-2"
-                  } hover:text-primary-foreground duration-200 ease-linear text-base`}
+                className={`${
+                  pathName === item.url
+                    ? "text-primary-foreground"
+                    : "text-secondary-2"
+                } hover:text-primary-foreground duration-200 ease-linear text-base`}
               >
                 {item.label}
               </Link>

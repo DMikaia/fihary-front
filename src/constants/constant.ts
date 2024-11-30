@@ -1,11 +1,12 @@
 import {
   AccordionTypes,
+  FooterLink,
   LandingNav,
   LoginSlider,
   MarketCategoryTypes,
 } from "./type";
 
-const loginSliders: LoginSlider[] = [
+const LOGIN_SLIDERS: LoginSlider[] = [
   {
     title: "La plateforme dédiée aux produits agricoles",
     img: "bg-slider-1",
@@ -20,7 +21,7 @@ const loginSliders: LoginSlider[] = [
   },
 ];
 
-const landingNav: LandingNav[] = [
+const LANDING_NAV: LandingNav[] = [
   {
     label: "Accueil",
     url: "/",
@@ -73,4 +74,60 @@ const MARKET_CATEGORIES: MarketCategoryTypes[] = [
   },
 ];
 
-export { loginSliders, landingNav, ACCORDION_DATA, MARKET_CATEGORIES };
+const FOOTER_LINKS: FooterLink[] = [
+  {
+    label: "Nos produits",
+    href: "#market",
+  },
+  {
+    label: "A propos",
+    href: "#about",
+  },
+  {
+    label: "Nos formations",
+    href: "#course",
+  },
+  {
+    label: "FAQ",
+    href: "#qa",
+  },
+];
+
+const FOOTER_OTHERS: FooterLink[] = [
+  {
+    label: "Conditions d'utilisation",
+    href: "",
+  },
+  {
+    label: "Mode nuit",
+    href: "",
+  },
+];
+
+const FOOTER_SOCIALS = [
+  {
+    name: "Facebook",
+    img: "/icons/facebook.svg",
+    url: "",
+  },
+  {
+    name: "Instagram",
+    img: "/icons/instagram.svg",
+    url: "",
+  },
+  {
+    name: "LinkedIn",
+    img: "/icons/linkedin.svg",
+    url: "",
+  },
+];
+
+export {
+  LANDING_NAV,
+  LOGIN_SLIDERS,
+  ACCORDION_DATA,
+  MARKET_CATEGORIES,
+  FOOTER_LINKS,
+  FOOTER_OTHERS,
+  FOOTER_SOCIALS,
+};

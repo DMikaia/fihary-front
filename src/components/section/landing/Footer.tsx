@@ -1,6 +1,12 @@
+import {
+  FOOTER_LINKS,
+  FOOTER_OTHERS,
+  FOOTER_SOCIALS,
+} from "@/constants/constant";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -25,67 +31,52 @@ export default function Footer() {
           </Button>
         </div>
 
-        <div className="flex flex-col gap-4 justify-start">
+        <div className="footer__links flex flex-col gap-4 justify-start">
           <h2 className="text-lg lg:text-xl text-primary font-semibold inter-tight">
             Liens utiles
           </h2>
-          <p className="text-sm lg:text-base text-secondary-2 hover:text-primary-foreground cursor-pointer duration-200 ease-linear">
-            Nos produits
-          </p>
-          <p className="text-sm lg:text-base text-secondary-2 hover:text-primary-foreground cursor-pointer duration-200 ease-linear">
-            A propos
-          </p>
-          <p className="text-sm lg:text-base text-secondary-2 hover:text-primary-foreground cursor-pointer duration-200 ease-linear">
-            Nos formations
-          </p>
-          <p className="text-sm lg:text-base text-secondary-2 hover:text-primary-foreground cursor-pointer duration-200 ease-linear">
-            FAQ
-          </p>
+          {FOOTER_LINKS.map((item, id) => (
+            <Link
+              key={id}
+              href={item.href}
+              className="text-sm lg:text-base text-secondary-2 hover:text-primary-foreground cursor-pointer duration-200 ease-linear"
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="footer__others flex flex-col gap-4">
           <h2 className="text-lg lg:text-xl text-primary font-semibold inter-tight">
             Autres
           </h2>
-          <p className="text-sm lg:text-base text-secondary-2 hover:text-primary-foreground cursor-pointer duration-200 ease-linear">
-            Conditions d&apos;utilisation
-          </p>
-          <p className="text-sm lg:text-base text-secondary-2 hover:text-primary-foreground cursor-pointer duration-200 ease-linear">
-            Mode nuit
-          </p>
+          {FOOTER_OTHERS.map((item, id) => (
+            <p
+              key={id}
+              className="text-sm lg:text-base text-secondary-2 hover:text-primary-foreground cursor-pointer duration-200 ease-linear"
+            >
+              {item.label}
+            </p>
+          ))}
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="footer__socials flex flex-col gap-4">
           <h2 className="text-lg lg:text-xl text-primary font-semibold inter-tight">
             Contactez nous
           </h2>
-          <div className="flex gap-2">
-            <Image
-              src={"/icons/facebook.svg"}
-              width={24}
-              height={24}
-              alt="logo of "
-            />
-            <p className="text-sm lg:text-base  text-secondary-2">Facebook</p>
-          </div>
-          <div className="flex gap-2">
-            <Image
-              src={"/icons/instagram.svg"}
-              width={24}
-              height={24}
-              alt="logo of "
-            />
-            <p className="text-sm lg:text-base text-secondary-2">Instagram</p>
-          </div>
-          <div className="flex gap-2">
-            <Image
-              src={"/icons/linkedin.svg"}
-              width={24}
-              height={24}
-              alt="logo of "
-            />
-            <p className="text-sm lg:text-base text-secondary-2">LinkedIn</p>
-          </div>
+          {FOOTER_SOCIALS.map((item, id) => (
+            <div className="flex gap-2">
+              <Image
+                src={item.img}
+                width={24}
+                height={24}
+                alt={`logo of ${item.name}`}
+              />
+              <p className="text-sm lg:text-base  text-secondary-2">
+                {item.name}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </footer>

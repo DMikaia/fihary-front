@@ -1,6 +1,6 @@
-import { loginSliders } from "@/constants/constant";
+import { LOGIN_SLIDERS } from "@/constants/constant";
 import Slider from "react-slick";
-import { cn } from "../../../lib/utils";
+import { cn } from "@/lib/utils";
 
 export default function LoginSlider() {
   const settings = {
@@ -13,7 +13,7 @@ export default function LoginSlider() {
 
   return (
     <Slider {...settings} className="w-full h-full">
-      {loginSliders.map((slide, index) => (
+      {LOGIN_SLIDERS.map((slide, index) => (
         <div
           key={index}
           className={cn(

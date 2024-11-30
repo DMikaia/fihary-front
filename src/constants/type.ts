@@ -43,6 +43,11 @@ interface MarketOrder {
   quantity: number;
 }
 
+type FooterLink = {
+  label: string;
+  href: string;
+};
+
 export type {
   LandingNav,
   LoginSlider,
@@ -51,4 +56,5 @@ export type {
   MarketCategoryTypes,
   MarketProduct,
   MarketOrder,
+  FooterLink,
 };
