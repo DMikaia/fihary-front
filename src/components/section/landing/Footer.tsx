@@ -65,7 +65,7 @@ export default function Footer() {
             Contactez nous
           </h2>
           {FOOTER_SOCIALS.map((item, id) => (
-            <div className="flex gap-2">
+            <div key={id} className="flex gap-2">
               <Image
                 src={item.img}
                 width={24}

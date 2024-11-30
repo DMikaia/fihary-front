@@ -48,6 +48,13 @@ type FooterLink = {
   href: string;
 };
 
+type AdminNav = {
+  label: string;
+  url: string;
+  img: string;
+  imgActive: string;
+};
+
 export type {
   LandingNav,
   LoginSlider,
@@ -57,4 +64,5 @@ export type {
   MarketProduct,
   MarketOrder,
   FooterLink,
+  AdminNav,
 };
