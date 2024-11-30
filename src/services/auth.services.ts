@@ -91,7 +91,7 @@ class AuthServices {
     const formData = new FormData();
     formData.append("pdp", picture);
     try {
-      const response = await axios.post(
+      const flaskResponse = await axios.post(
         `${this.flaskURL}/flask-api/facial-recognition`,
         formData,
         {
@@ -101,9 +101,25 @@ class AuthServices {
         }
       );
 
-      if (response.status === 200) {
-        console.log(response);
-        return { status: 200, message: "Authentificated" };
+      if (flaskResponse.status === 200) {
+        const nodeResponse = await axios.post(
+          `${this.nodeURL}/admin/auth/login-facial`,
+          {
+            image: flaskResponse.data.file as string,
+          }
+        );
+
+        console.log(nodeResponse);
+
+        if (nodeResponse.status === 200) {
+          console.log(nodeResponse.data);
+          return { status: 200, message: "Authentificated" };
+        } else {
+          return {
+            status: 400,
+            message: "Unauthentificated",
+          };
+        }
       } else {
         return {
           status: 400,

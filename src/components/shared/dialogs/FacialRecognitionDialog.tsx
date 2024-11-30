@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import {
     Dialog,
     DialogContent,
+    DialogDescription,
     DialogHeader,
     DialogTitle,
     DialogTrigger,
@@ -91,6 +92,7 @@ const FacialRecognitionDialog: FC = (): JSX.Element => {
                             </DialogTitle>
                         </Fragment>
                     )}
+                    <DialogDescription className="hidden"></DialogDescription>
                 </DialogHeader>
                 {isAuthentificated === "Authentificated" && isReady && isAuthentificated && (
                     <div className="absolute w-full h-full bg-white rounded-lg flex items-center justify-center">
