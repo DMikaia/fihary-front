@@ -55,6 +55,12 @@ type AdminNav = {
   imgActive: string;
 };
 
+interface GeneralStatistics {
+  orders: number;
+  activeBox: number;
+  sells: number;
+}
+
 export type {
   LandingNav,
   LoginSlider,
@@ -65,4 +71,5 @@ export type {
   MarketOrder,
   FooterLink,
   AdminNav,
+  GeneralStatistics,
 };
