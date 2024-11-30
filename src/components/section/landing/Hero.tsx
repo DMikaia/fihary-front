@@ -82,7 +82,7 @@ const Hero: React.FC = () => {
           <ResearchForm />
           <div className="mt-12 flex flex-col items-center gap-5">
             <AnimatedElement delay={0.8} from={{ opacity: 0, scale: 1.6 }} to={{ opacity: 1, scale: 1 }}>
-              <p className="text-secondary">Proposé par nos producteurs de</p>
+              <p className="text-secondary dark:text-white">Proposé par nos producteurs de</p>
             </AnimatedElement>
 
             <AnimatedElement delay={1.2} from={{ opacity: 0, scale: 1.6 }} to={{ opacity: 1, scale: 1 }}>
