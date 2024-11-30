@@ -28,10 +28,18 @@ type MarketCategoryTypes = {
   id: string;
 };
 
+interface MarketProduct {
+  name: string;
+  imgUrl: string;
+  price: number;
+  unit: string;
+}
+
 export type {
   LandingNav,
   LoginSlider,
   AccordionTypes,
   LandingProductTypes,
   MarketCategoryTypes,
+  MarketProduct,
 };
