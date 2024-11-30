@@ -5,7 +5,7 @@ export default function Remainder() {
     <div className="flex flex-col gap-8">
       <h2>Alertes / Remainder</h2>
 
-      <div className="w-full border shadow-sm border-[#C4C4C4] rounded-xl p-4">
+      <div className="w-full border shadow-sm border-[#C4C4C4] bgtransparent dark:bg-darkBackground dark:border-none rounded-xl p-4">
         <div className="flex gap-4 items-center">
           <div className="p-2 rounded-full bg-gray">
             <Image

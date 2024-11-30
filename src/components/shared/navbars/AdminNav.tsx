@@ -9,7 +9,7 @@ export default function AdminNav() {
   const pathName = usePathname();
 
   return (
-    <nav className="min-h-screen bg-[#F5F5F5] py-12 px-8 w-[260px] xl:w-[280px] hidden lg:flex fixed top-0">
+    <nav className="min-h-screen bg-[#F5F5F5] dark:bg-darkBackground py-12 px-8 w-[260px] xl:w-[280px] hidden lg:flex fixed top-0">
       <div className="mx-auto container w-full h-full flex flex-col gap-16">
         <Image
           src={"/icons/logo-2.svg"}
@@ -25,8 +25,8 @@ export default function AdminNav() {
               key={id}
               href={item.url}
               className={`w-full h-fit flex gap-2 items-center px-4 py-2 rounded-lg hover:bg-primary-foreground duration-200 ease-linear ${item.url === pathName
-                  ? "bg-primary-foreground"
-                  : "bg-transparent"
+                ? "bg-primary-foreground"
+                : "bg-transparent"
                 }`}
             >
               <Image

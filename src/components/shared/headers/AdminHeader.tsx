@@ -9,6 +9,7 @@ import { RootState } from "@/lib/redux/store";
 import { usePathname } from "next/navigation";
 import { AlignLeft } from "lucide-react";
 import Image from "next/image";
+import ThemeSwitch from "@/components/theme-switch/ThemeSwitch";
 
 export default function AdminHeader() {
   const dispatch = useDispatch();
@@ -26,7 +27,7 @@ export default function AdminHeader() {
           <AlignLeft size={24} className="stroke-secondary" />
         </Button>
 
-        <h1 className="w-fit text-lg xl:text-xl font-semibold hidden lg:block text-secondary inter-tight">
+        <h1 className="w-fit text-lg xl:text-xl font-semibold hidden lg:block text-secondary dark:text-white inter-tight">
           Bonjour Herifanantenana
         </h1>
 
@@ -45,6 +46,7 @@ export default function AdminHeader() {
           <p className="text-white p-1 w-[32px] h-[32px] flex justify-center items-center bg-[#F8BD00] rounded-full cursor-pointer">
             SR
           </p>
+          <ThemeSwitch />
         </div>
       </header>
 

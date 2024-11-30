@@ -3,7 +3,7 @@ import { getStatusColor } from "@/helpers/color-helpers";
 
 export default function AdminNotification() {
   return (
-    <div className="p-4 rounded-xl bg-white shadow border h-full">
+    <div className="p-4 rounded-xl bg-white dark:bg-darkBackground shadow border h-full">
       <p className="text-[#616161] font-semibold">Notifications</p>
 
       <ul className="flex flex-col gap-4 mt-4 inter-tight">

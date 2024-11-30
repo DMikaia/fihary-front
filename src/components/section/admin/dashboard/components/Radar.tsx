@@ -36,7 +36,7 @@ const chartConfig = {
 export function GeneralChart() {
   return (
     <Card>
-      <CardHeader className="items-start">
+      <CardHeader className="items-start bg-white dark:bg-darkBackground overflow-hidden">
         <CardTitle>Vue d'ensemble</CardTitle>
         <CardDescription>
           Showing total visitors for the last 6 months

@@ -25,7 +25,7 @@ export default function BoxSells() {
   return (
     <div className="box__monitoring w-full">
       <div className="w-full flex justify-between items-center">
-        <h2 className="inter-tight text-secondary">Monitoring des box</h2>
+        <h2 className="inter-tight text-secondary dark:text-white">Monitoring des box</h2>
         <Link href={"#"} className="flex gap-2 items-center">
           <p className="text-md text-primary-foreground">Afficher tout</p>
           <Image

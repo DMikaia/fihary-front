@@ -18,11 +18,10 @@ export default function StatCard({
 }: StatProps) {
   return (
     <Card
-      className={`flex flex-col items-start gap-4 p-4 ${
-        id === 3 ? "sm:col-span-2 md:col-span-1" : ""
-      }`}
+      className={`flex flex-col bg-white dark:bg-darkBackground items-start gap-4 p-4 ${id === 3 ? "sm:col-span-2 md:col-span-1" : ""
+        }`}
     >
-      <p className="text-secondary-2/75 text-sm border border-gray rounded-xl">
+      <p className="text-secondary-2/75 text-sm border border-gray rounded-xl dark:border-none dark:text-white">
         {title}
       </p>
       <CardContent className="w-full flex gap-4 items-center p-0">
