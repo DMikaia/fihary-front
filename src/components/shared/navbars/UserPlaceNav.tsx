@@ -35,8 +35,8 @@ export default function UserPlaceNav() {
                                 <Link
                                     key={index}
                                     href={item.url}
-                                    className={`${pathName === item.url ? "text-[#A1D83B]" : "text-secondary-2"
-                                        } hover:text-[#A1D83B] duration-200 ease-linear text-base`}
+                                    className={`${pathName === item.url ? "text-primary-foreground" : "text-secondary-2"
+                                        } hover:text-primary-foreground duration-200 ease-linear text-base`}
                                 >
                                     {item.label}
                                 </Link>

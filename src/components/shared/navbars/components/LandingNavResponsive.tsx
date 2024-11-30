@@ -24,8 +24,8 @@ export default function LandingNavResponsive({
             <Link
               key={index}
               href={item.url}
-              className={`${activeLink === item.url ? "text-[#A1D83B]" : "text-secondary-2"
-                } hover:text-[#A1D83B] duration-200 ease-linear text-base w-fit text-left`}
+              className={`${activeLink === item.url ? "text-primary-foreground" : "text-secondary-2"
+                } hover:text-primary-foreground duration-200 ease-linear text-base w-fit text-left`}
             >
               {item.label}
             </Link>
