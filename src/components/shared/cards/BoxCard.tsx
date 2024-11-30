@@ -5,7 +5,7 @@ import { Button } from "../../ui/button";
 
 export default function BoxCard({ id, location, login, phone }: Box) {
   return (
-    <Card className="w-full rounded-xl p-8 flex flex-col gap-8">
+    <Card className="w-full rounded-xl p-8 flex flex-col gap-8 dark:bg-darkBackground">
       <div className="flex gap-8 items-center">
         <div className="w-fit h-fit p-4 bg-[#A1D83B26] rounded-full">
           <Image

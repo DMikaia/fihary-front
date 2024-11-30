@@ -54,7 +54,9 @@ export type {
   SignupFormSchema,
   OrderFormSchema,
   AdminFormSchema,
+  StockFormSchema,
 };
+
 export {
   loginFormSchema,
   signupFormSchema,

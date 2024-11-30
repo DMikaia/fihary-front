@@ -4,6 +4,7 @@ import { loginFormSchema, LoginFormSchema } from "@/lib/form-validation";
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
+import authService from "@/services/auth.service";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
@@ -35,15 +36,14 @@ export default function LoginForm() {
 
     if (loginResponse.status === 200) {
       toast({
-        title: " Utilisateur authentifié avec succés!"
-      })
-    }
-    else {
+        title: " Utilisateur authentifié avec succés!",
+      });
+    } else {
       toast({
         title: "Un erreur s'est produit!",
         description: "Veuillez valider les données entrées",
-        variant: "destructive"
-      })
+        variant: "destructive",
+      });
     }
 
     setLoading(false);
