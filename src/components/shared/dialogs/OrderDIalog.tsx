@@ -47,7 +47,7 @@ export default function OrderDialog({ total }: OrderProps) {
 
                 <div className="flex flex-col justify-center gap-2">
                   <h2 className="font-semibold text-lg">{item.name}</h2>
-                  <p>
+                  <p className="inter-tight">
                     {item.price} Ar/{item.unit}
                   </p>
                 </div>

@@ -34,7 +34,7 @@ const Cart: FC = (): JSX.Element => {
             <div className="flex flex-col gap-2">
               <h3 className="text-secondary font-semibold inter-tight">
                 Anandrano{" "}
-                <span className="text-secondary/70 font-medium text-sm">
+                <span className="text-secondary/70 font-medium text-sm inter-tight">
                   (500 Ar/botte)
                 </span>
               </h3>
