@@ -123,4 +123,62 @@ const OrderInProgressMock: OrderTypes[] = [
   },
 ];
 
-export { GERNERAL_STAT, ADMIN_NOTIFICATIONS, OrderInProgressMock };
+const STOCK_MOCK_DATA = [
+  {
+    name: "Carrotes",
+    description: "EL carote",
+    img: "/img/mockdata/market-product-4.png",
+    quantity: 35,
+    price: 1500,
+    unit: "kg",
+  },
+  {
+    name: "Vary manalalondo",
+    description: "Riz rouge",
+    img: "/img/mockdata/market-product-1.png",
+    quantity: 2500,
+    price: 3500,
+    unit: "kg",
+  },
+];
+
+const BOX_MOCK_DATA = [
+  {
+    id: "BOX015",
+    location: "Ankadifotsy",
+    login: "ef524",
+    phone: "034 87 167 15",
+  },
+  {
+    id: "BOX016",
+    location: "Antanimena",
+    login: "ef574",
+    phone: "034 07 167 15",
+  },
+  {
+    id: "BOX017",
+    location: "Mahazo",
+    login: "ef524",
+    phone: "034 87 789 45",
+  },
+  {
+    id: "BOX018",
+    location: "Alarobia",
+    login: "ef532",
+    phone: "034 87 879 15",
+  },
+  {
+    id: "BOX019",
+    location: "Ankadifotsy",
+    login: "ef503",
+    phone: "032 21 258 15",
+  },
+];
+
+export {
+  GERNERAL_STAT,
+  ADMIN_NOTIFICATIONS,
+  OrderInProgressMock,
+  STOCK_MOCK_DATA,
+  BOX_MOCK_DATA,
+};

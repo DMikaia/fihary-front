@@ -57,20 +57,35 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="landing__hero w-full overflow-x-hidden px-6 md:px-12 lg:px-24 py-8 mt-[15vh] md:mt-[25vh]" ref={ref}>
+    <section
+      className="landing__hero w-full overflow-x-hidden px-6 md:px-24 lg:px-48 py-8 mt-[15vh] md:mt-[25vh]"
+      ref={ref}
+    >
       <div className="container mx-auto w-full flex justify-center items-center gap-16">
         <div className="shape-1 absolute -left-24 md:-left-28 hidden md:flex lg:-left-32 top-[7vh]">
-          <img src="/icons/shape-1.svg" alt="shape-1" className="w-[270px] md:w-[320px] lg:w-auto" />
+          <img
+            src="/icons/shape-1.svg"
+            alt="shape-1"
+            className="w-[270px] md:w-[320px] lg:w-auto"
+          />
         </div>
         <div className="flex flex-col items-center gap-8 text-secondary relative z-30">
           <h1 className="text-[1.6em] md:text-[2.3em] dark:text-white lg:text-5xl 2xl:text-6xl inter-tight leading-tight text-center flex-wrap">
-            <span className="font-bold">{splitText("Consommez malin,")}</span> <br />
+            <span className="font-bold">{splitText("Consommez malin,")}</span>{" "}
+            <br />
             {splitText("soutenez nos")}
-            <span className="text-primary-foreground italic"> {splitText("producteurs")}</span>
+            <span className="text-primary-foreground italic">
+              {" "}
+              {splitText("producteurs")}
+            </span>
             {splitText(" locaux")}
           </h1>
 
-          <AnimatedElement delay={1.4} from={{ opacity: 0, y: 120 }} to={{ opacity: 1, y: 0 }}>
+          <AnimatedElement
+            delay={1.4}
+            from={{ opacity: 0, y: 120 }}
+            to={{ opacity: 1, y: 0 }}
+          >
             <p className="text-secondary-2 dark:text-darkGray text-center max-w-[750px] w-full">
               Une sélection unique de produits agricoles frais et authentiques,
               directement issus des coopératives locales. Soutenez une
@@ -81,32 +96,46 @@ const Hero: React.FC = () => {
 
           <ResearchForm />
           <div className="mt-12 flex flex-col items-center gap-5">
-            <AnimatedElement delay={0.8} from={{ opacity: 0, scale: 1.6 }} to={{ opacity: 1, scale: 1 }}>
-              <p className="text-secondary dark:text-white">Proposé par nos producteurs de</p>
+            <AnimatedElement
+              delay={0.8}
+              from={{ opacity: 0, scale: 1.6 }}
+              to={{ opacity: 1, scale: 1 }}
+            >
+              <p className="text-secondary dark:text-white">
+                Proposé par nos producteurs de
+              </p>
             </AnimatedElement>
 
-            <AnimatedElement delay={1.2} from={{ opacity: 0, scale: 1.6 }} to={{ opacity: 1, scale: 1 }}>
+            <AnimatedElement
+              delay={1.2}
+              from={{ opacity: 0, scale: 1.6 }}
+              to={{ opacity: 1, scale: 1 }}
+            >
               <div className="flex gap-4 items-center">
                 <Image
-                  src={"/icons/logo.svg"}
-                  width={112}
-                  height={31}
+                  src={"/icons/associations-des-jeunes.svg"}
+                  width={293}
+                  height={450}
                   alt="Logo of Fihary"
-                  className="w-[92px]"
+                  className="w-[293px]"
                 />
                 <Image
-                  src={"/icons/logo.svg"}
-                  width={112}
-                  height={31}
+                  src={"/icons/cooperative-aina.svg"}
+                  width={213}
+                  height={35}
                   alt="Logo of Fihary"
-                  className="w-[92px]"
+                  className="w-[213px]"
                 />
               </div>
             </AnimatedElement>
           </div>
         </div>
         <div className="shape-2 absolute right-0 hidden md:flex">
-          <img src="/icons/shape-2.svg" alt="shape-1" className="md:w-[200px] lg:w-auto" />
+          <img
+            src="/icons/shape-2.svg"
+            alt="shape-1"
+            className="md:w-[200px] lg:w-auto"
+          />
         </div>
       </div>
       <div className="shape-3 absolute left-[15vw] hidden md:flex">

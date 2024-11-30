@@ -11,7 +11,7 @@ type LandingNav = {
 
 type AccordionTypes = {
   question: string;
-  response: string;
+  answer: string;
   index?: number;
   className?: string;
 };
@@ -90,6 +90,22 @@ interface Response<T> {
   rest?: T;
 }
 
+interface Stock {
+  name: string;
+  description: string;
+  img: string;
+  quantity: number;
+  price: number;
+  unit: string;
+}
+
+type Box = {
+  id: string;
+  location: string;
+  login: string;
+  phone: string;
+};
+
 export type {
   LandingNav,
   LoginSlider,
@@ -104,4 +120,6 @@ export type {
   Notification,
   OrderTypes,
   Response,
+  Stock,
+  Box,
 };
