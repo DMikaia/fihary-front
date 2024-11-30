@@ -21,12 +21,12 @@ export default function StatCard({
       <p className="text-secondary-2/75 text-sm border border-gray rounded-xl">
         {title}
       </p>
-      <CardContent className="w-full flex gap-8 items-center p-0">
+      <CardContent className="w-full flex gap-4 items-center p-0">
         <div className={`w-fit h-fit p-3 rounded-full ${className}`}>
           <Image src={icon} width={24} height={24} alt={`stat_card_${id}`} />
         </div>
 
-        <h1 className="text-4xl font-semibold">{data}</h1>
+        <h1 className="text-3xl font-semibold">{data}</h1>
       </CardContent>
     </Card>
   );

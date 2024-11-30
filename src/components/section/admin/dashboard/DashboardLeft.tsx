@@ -4,8 +4,8 @@ import BoxSells from "./components/BoxSells";
 
 export default function DashboardLeft() {
   return (
-    <div className="admin__dashboard__left w-[60%] flex flex-col gap-8">
-      <div className="general__stat w-full grid lg:grid-cols-3 gap-8">
+    <div className="admin__dashboard__left w-[60%] flex flex-col gap-10">
+      <div className="general__stat w-full grid lg:grid-cols-3 gap-6">
         <StatCard
           icon="/icons/shopping-cart.svg"
           id={1}

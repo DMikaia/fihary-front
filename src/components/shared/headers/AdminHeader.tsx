@@ -26,7 +26,7 @@ export default function AdminHeader() {
           <AlignLeft size={24} className="stroke-secondary" />
         </Button>
 
-        <h1 className="w-fit text-xl font-semibold hidden lg:block">
+        <h1 className="w-fit text-xl font-semibold hidden lg:block text-secondary inter-tight">
           Bonjour Herifanantenana
         </h1>
 
