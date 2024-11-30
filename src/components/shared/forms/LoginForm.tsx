@@ -75,13 +75,13 @@ export default function LoginForm() {
                       <EyeIcon
                         size={20}
                         onClick={() => setShow(!show)}
-                        className="text-secondary mr-4"
+                        className="text-secondary dark:text-white mr-4"
                       />
                     ) : (
                       <EyeOffIcon
                         size={20}
                         onClick={() => setShow(!show)}
-                        className="text-secondary mr-4"
+                        className="text-secondary dark:text-white mr-4"
                       />
                     )
                   }
