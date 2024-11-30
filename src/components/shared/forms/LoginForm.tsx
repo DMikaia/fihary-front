@@ -34,7 +34,6 @@ export default function LoginForm() {
     const loginResponse = await authServices.userLogin(data);
 
     if (loginResponse.status === 200) {
-      console.log(loginResponse.rest);
       toast({
         title: " Utilisateur authentifié avec succés!"
       })
@@ -42,6 +41,7 @@ export default function LoginForm() {
     else {
       toast({
         title: "Un erreur s'est produit!",
+        description: "Veuillez valider les données entrées",
         variant: "destructive"
       })
     }

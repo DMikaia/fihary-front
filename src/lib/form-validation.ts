@@ -9,7 +9,7 @@ const loginFormSchema = z.object({
 
 const signupFormSchema = z.object({
   fullname: z.string().min(8, { message: "Nom complet" }),
-  mobilenumber: z
+  phone_number: z
     .string()
     .min(8, { message: "Le numéro mobile doit être 10 chiffres" }),
   email: z.string().email({ message: "Email invalide" }),
