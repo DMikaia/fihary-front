@@ -11,7 +11,7 @@ export default function Hero() {
         <div className="flex flex-col items-center gap-8 text-secondary relative z-30">
           <h1 className="text-[1.6em] md:text-[2.3em] lg:text-5xl 2xl:text-6xl inter-tight leading-tight text-center flex-wrap">
             <span className="font-bold">Consommez malin,</span> <br />soutenez nos
-            <span className="text-[#A1D83B]"> producteurs</span> locaux
+            <span className="text-primary-foreground"> producteurs</span> locaux
           </h1>
 
           <p className="text-secondary/70 text-center max-w-[750px] w-full">

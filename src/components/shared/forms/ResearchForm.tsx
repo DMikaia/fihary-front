@@ -21,7 +21,7 @@ export default function ResearchForm() {
         onChange={(e) => setValue(e.target.value)}
         suffix={<Search size={16} className="stroke-secondary-2" />}
       />
-      <Button className="bg-[#A1D83B] hover:bg-[#A1D83B]/95 text-white h-[40px] md:h-12 rounded-xl px-8">
+      <Button className="bg-primary-foreground hover:bg-primary-foreground/95 text-white h-[40px] md:h-12 rounded-xl px-8">
         Rechercher
       </Button>
     </form>
