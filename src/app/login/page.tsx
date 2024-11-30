@@ -60,7 +60,7 @@ export default function Login() {
           </p>
         </div>
       </div>
-      <div className="login__image w-[55%] bg-[url('/img/login-slider-1.png')] bg-cover bg-center min-h-screen hidden md:flex justify-center items-end px-6 py-8 text-center">
+      <div className="login__image w-[55%] bg-[url('/img/login-slider-1.png')] bg-cover bg-center min-h-screen hidden md:flex justify-center items-end px-6 py-5 text-center">
         <div className="min-h-screen py-8 w-full flex flex-col items-center justify-end gap-4">
           <h1 className="text-3xl text-white font-bold w-fit inter-tight">
             La plateforme dédiée aux produits agricoles

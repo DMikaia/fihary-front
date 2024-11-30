@@ -79,11 +79,23 @@ body {
   border: none;
 }
 
- .slick-list, .slick-track {
-  min-height: 100vh;
-  height: 100%;
-}
 
 body {
   background-color: #FBFDF7;
 }
+
+.letters,
+.animated {
+  opacity: 0;
+}
+
+.letters-staggers-down {
+  opacity: 0;
+  display: inline-block;
+}
+
+.letters-text-smooth {
+  color: rgb(110, 110, 110);
+  transition: color 0.1s ease, opacity 0.3s ease;
+}
+

@@ -73,4 +73,12 @@ const MARKET_CATEGORIES: MarketCategoryTypes[] = [
   },
 ];
 
-export { loginSliders, landingNav, ACCORDION_DATA, MARKET_CATEGORIES };
+const HERO_TEXT: string[] = ``.split(" ");
+
+export {
+  loginSliders,
+  landingNav,
+  ACCORDION_DATA,
+  MARKET_CATEGORIES,
+  HERO_TEXT,
+};
