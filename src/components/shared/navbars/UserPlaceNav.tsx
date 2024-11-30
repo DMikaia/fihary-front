@@ -3,7 +3,6 @@
 import LandingNavResponsive from "./components/LandingNavResponsive";
 import { toggleNav } from "@/lib/redux/slices/nav-slice";
 import { useDispatch, useSelector } from "react-redux";
-import { landingNav } from "@/constants/constant";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
 import { RootState } from "@/lib/redux/store";
@@ -11,6 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 import UserSearchForm from "../forms/UserSearchForm";
+import { LANDING_NAV } from "@/constants/constant";
 
 export default function UserPlaceNav() {
     const dispatch = useDispatch();
@@ -31,7 +31,7 @@ export default function UserPlaceNav() {
                         />
 
                         <div className="hidden lg:flex justify-center items-center gap-8">
-                            {landingNav.map((item, index) => (
+                            {LANDING_NAV.map((item, index) => (
                                 <Link
                                     key={index}
                                     href={item.url}

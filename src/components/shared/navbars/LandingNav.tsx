@@ -9,21 +9,34 @@ import { usePathname } from "next/navigation";
 import { RootState } from "@/lib/redux/store";
 import Image from "next/image";
 import Link from "next/link";
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import AnimatedElement from "../animations/AnimatedElements";
+import ThemeSwitch from "@/components/theme-switch/ThemeSwitch";
+import { useTheme } from "next-themes";
 
 export default function LandingNav() {
   const dispatch = useDispatch();
   const pathName = usePathname();
   const { isOpen } = useSelector((state: RootState) => state.nav);
+  const { theme } = useTheme();
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <Fragment>
-      <nav className="landing__nav w-full h-[80px] fixed z-10 top-0 bg-white lg:bg-gray lg:absolute overflow-hidden px-6 md:px-8 py-8">
+      <nav className="landing__nav w-full h-[80px] fixed z-10 top-0 bg-white lg:bg-gray lg:dark:bg-background lg:absolute overflow-hidden px-6 md:px-8 py-8">
         <div className="container mx-auto w-full flex justify-between items-center">
           <AnimatedElement from={{ opacity: 0, scale: 1.5, rotate: -50 }} to={{ opacity: 1, rotate: 0, scale: 1 }}>
             <Image
-              src={"/icons/logo-2.svg"}
+              src={theme === "dark" ? "/icons/logo-dark.svg" : "/icons/logo-2.svg"}
               width={112}
               height={31}
               alt="Fihary logo"
@@ -33,17 +46,18 @@ export default function LandingNav() {
 
           <div className="hidden lg:flex justify-center items-center gap-8">
             {LANDING_NAV.map((item, index) => (
-              <Link
-                key={index}
-                href={item.url}
-                className={`${
-                  pathName === item.url
+              <AnimatedElement key={index} delay={(index + 0.02) * 0.2} from={{ opacity: 0, y: -100 }} to={{ opacity: 1, y: 0 }}>
+                <Link
+                  key={index}
+                  href={item.url}
+                  className={`${pathName === item.url
                     ? "text-primary-foreground"
-                    : "text-secondary-2"
-                } hover:text-primary-foreground duration-200 ease-linear text-base`}
-              >
-                {item.label}
-              </Link>
+                    : "text-secondary-2  dark:text-darkGray"
+                    } hover:text-primary-foreground duration-200 ease-linear text-base`}
+                >
+                  {item.label}
+                </Link>
+              </AnimatedElement>
             ))}
           </div>
 
@@ -54,6 +68,7 @@ export default function LandingNav() {
             <AnimatedElement delay={0.7} from={{ opacity: 0, x: 100 }} to={{ opacity: 1, x: 0 }}>
               <Button className="text-white">S&apos;inscrire</Button>
             </AnimatedElement>
+            <ThemeSwitch />
           </div>
 
           <Button

@@ -3,20 +3,24 @@
 import LandingProductCard from "@/components/shared/cards/LandingProductCard";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { FC, useRef } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { LANDING_PRODUCT_MOCK } from "@/constants/__mock__/landingMock";
 import AnimatedElement from "@/components/shared/animations/AnimatedElements";
+import { useTheme } from "next-themes";
 
 const Products: FC = (): JSX.Element => {
     const sliderRef = useRef<Slider | null>(null);
+    const { theme } = useTheme();
+    const [mounted, setMounted] = useState(false);
 
     const settings = {
         speed: 400,
         slidesToScroll: 4,
         slidesToShow: 4,
+        arrows: false,
         infinite: false,
         responsive: [
             {
@@ -50,14 +54,23 @@ const Products: FC = (): JSX.Element => {
         ],
     };
 
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) {
+        //@ts-ignore
+        return null;
+    }
+
     return (
         <section className="landing__products w-full overflow-hidden mt-24 px-6 lg:px-24">
-            <div className="container mx-auto px-1 md:px-7 bg-white shadow-boxShadow1 rounded-lg">
+            <div className="container mx-auto px-1 md:px-7 bg-white dark:bg-darkBackground shadow-boxShadow1 rounded-lg">
                 <div className="content px-5 md:px-7 lg:px-10 py-8">
                     <header className="flex flex-col md:flex-row md:justify-between md:items-end gap-4">
                         <div>
                             <AnimatedElement duration={0.5} delay={0.1} from={{ opacity: 0, x: -180 }} to={{ opacity: 1, x: 0 }}><p className="text-primary-foreground">NOS PRODUITS</p></AnimatedElement>
-                            <AnimatedElement duration={0.5} delay={0.4} from={{ opacity: 0, x: -180 }} to={{ opacity: 1, x: 0 }}><h2 className="text-secondary text-2xl lg:text-3xl inter-tight max-w-[250px] lg:max-w-[300px] mt-3 md:mt-5"><b>Explorez notre </b>sélection de produits</h2></AnimatedElement>
+                            <AnimatedElement duration={0.5} delay={0.4} from={{ opacity: 0, x: -180 }} to={{ opacity: 1, x: 0 }}><h2 className="text-secondary dark:text-white text-2xl lg:text-3xl inter-tight max-w-[250px] lg:max-w-[300px] mt-3 md:mt-5"><b>Explorez notre </b>sélection de produits</h2></AnimatedElement>
                         </div>
                         <AnimatedElement duration={0.5} delay={1} from={{ opacity: 0, x: -180 }} to={{ opacity: 1, x: 0 }}>
                             <Button variant="ghost" className="text-secondary w-max">
@@ -77,8 +90,8 @@ const Products: FC = (): JSX.Element => {
                             }
                         </Slider>
                         <div className="slider-buttons absolute top-1/2 -right-5 md:-right-3 transform -translate-y-1/2 flex space-x-2">
-                            <div className="right border border-[#003E21] bg-white hover:bg-[#003E21]/25 w-max rounded-full p-[5px] cursor-pointer" onClick={() => sliderRef.current?.slickNext()}>
-                                <img src="/icons/arrow-right.svg" alt="arrow-right-icon" className="w-[24px] md:w-[30px]" />
+                            <div className="right border border-[#003E21] dark:border-white hover:dark:bg-primary-foreground bg-white dark:bg-darkBackground hover:bg-[#003E21]/25 w-max rounded-full p-[5px] cursor-pointer" onClick={() => sliderRef.current?.slickNext()}>
+                                <img src={theme === "dark" ? "/icons/arrow-right-white.svg" : "/icons/arrow-right.svg"} alt="arrow-right-icon" className="w-[24px] md:w-[30px]" />
                             </div>
                         </div>
                     </div>

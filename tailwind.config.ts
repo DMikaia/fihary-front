@@ -50,6 +50,10 @@ export default {
         gray: {
           DEFAULT: "#FBFDF7",
         },
+        darkGray: {
+          DEFAULT: "#A6AEB6",
+        },
+        darkBackground: "#242426",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

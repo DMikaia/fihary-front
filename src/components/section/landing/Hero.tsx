@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
           <img src="/icons/shape-1.svg" alt="shape-1" className="w-[270px] md:w-[320px] lg:w-auto" />
         </div>
         <div className="flex flex-col items-center gap-8 text-secondary relative z-30">
-          <h1 className="text-[1.6em] md:text-[2.3em] lg:text-5xl 2xl:text-6xl inter-tight leading-tight text-center flex-wrap">
+          <h1 className="text-[1.6em] md:text-[2.3em] dark:text-white lg:text-5xl 2xl:text-6xl inter-tight leading-tight text-center flex-wrap">
             <span className="font-bold">{splitText("Consommez malin,")}</span> <br />
             {splitText("soutenez nos")}
             <span className="text-primary-foreground italic"> {splitText("producteurs")}</span>
@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
           </h1>
 
           <AnimatedElement delay={1.4} from={{ opacity: 0, y: 120 }} to={{ opacity: 1, y: 0 }}>
-            <p className="text-secondary-2 text-center max-w-[750px] w-full">
+            <p className="text-secondary-2 dark:text-darkGray text-center max-w-[750px] w-full">
               Une sélection unique de produits agricoles frais et authentiques,
               directement issus des coopératives locales. Soutenez une
               consommation responsable tout en savourant le meilleur de
@@ -82,7 +82,7 @@ const Hero: React.FC = () => {
           <ResearchForm />
           <div className="mt-12 flex flex-col items-center gap-5">
             <AnimatedElement delay={0.8} from={{ opacity: 0, scale: 1.6 }} to={{ opacity: 1, scale: 1 }}>
-              <p>Proposé par nos producteurs de</p>
+              <p className="text-secondary">Proposé par nos producteurs de</p>
             </AnimatedElement>
 
             <AnimatedElement delay={1.2} from={{ opacity: 0, scale: 1.6 }} to={{ opacity: 1, scale: 1 }}>

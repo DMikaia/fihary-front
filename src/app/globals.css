@@ -8,7 +8,7 @@ body {
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 80 60% 98%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
@@ -35,7 +35,7 @@ body {
     --radius: 0.5rem;
   }
   .dark {
-    --background: 240 10% 3.9%;
+    --background: 0 0% 1%;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -43,8 +43,8 @@ body {
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
     --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 0 0% 100%;
+    --secondary-foreground: 0 0% 100%;
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
     --accent: 240 3.7% 15.9%;
@@ -67,7 +67,7 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background;
   }
 }
 
@@ -77,25 +77,5 @@ body {
 
 .landing-product__card {
   border: none;
-}
-
-
-body {
-  background-color: #FBFDF7;
-}
-
-.letters,
-.animated {
-  opacity: 0;
-}
-
-.letters-staggers-down {
-  opacity: 0;
-  display: inline-block;
-}
-
-.letters-text-smooth {
-  color: rgb(110, 110, 110);
-  transition: color 0.1s ease, opacity 0.3s ease;
 }
 
