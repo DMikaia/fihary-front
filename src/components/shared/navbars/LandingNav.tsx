@@ -10,6 +10,7 @@ import { RootState } from "@/lib/redux/store";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
+import AnimatedElement from "../animations/AnimatedElements";
 
 export default function LandingNav() {
   const dispatch = useDispatch();
@@ -20,13 +21,15 @@ export default function LandingNav() {
     <Fragment>
       <nav className="landing__nav w-full h-[80px] fixed z-10 top-0 bg-white lg:bg-gray lg:absolute overflow-hidden px-6 md:px-8 py-8">
         <div className="container mx-auto w-full flex justify-between items-center">
-          <Image
-            src={"/icons/logo-2.svg"}
-            width={112}
-            height={31}
-            alt="Fihary logo"
-            className="w-[96px]"
-          />
+          <AnimatedElement from={{ opacity: 0, scale: 1.5, rotate: -50 }} to={{ opacity: 1, rotate: 0, scale: 1 }}>
+            <Image
+              src={"/icons/logo-2.svg"}
+              width={112}
+              height={31}
+              alt="Fihary logo"
+              className="w-[96px]"
+            />
+          </AnimatedElement>
 
           <div className="hidden lg:flex justify-center items-center gap-8">
             {LANDING_NAV.map((item, index) => (
@@ -45,8 +48,12 @@ export default function LandingNav() {
           </div>
 
           <div className="hidden lg:flex gap-4 items-center justify-center">
-            <Button variant={"ghost"}>Se connecter</Button>
-            <Button className="text-white">S&apos;inscrire</Button>
+            <AnimatedElement delay={0.5} from={{ opacity: 0, x: -100 }} to={{ opacity: 1, x: 0 }}>
+              <Button variant={"ghost"}>Se connecter</Button>
+            </AnimatedElement>
+            <AnimatedElement delay={0.7} from={{ opacity: 0, x: 100 }} to={{ opacity: 1, x: 0 }}>
+              <Button className="text-white">S&apos;inscrire</Button>
+            </AnimatedElement>
           </div>
 
           <Button
