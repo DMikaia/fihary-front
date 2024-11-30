@@ -53,7 +53,7 @@ export default function StockAction() {
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="most-sells" className="flex gap-4">
-              <p className="text-primary font-semibold">Plus achetés</p>
+              <p className="text-primary font-semibold">Catégories</p>
             </SelectItem>
             <SelectItem value="availability" className="flex gap-4">
               <p className="text-primary font-semibold">Disponibilité</p>

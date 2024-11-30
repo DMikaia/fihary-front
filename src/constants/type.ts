@@ -11,7 +11,7 @@ type LandingNav = {
 
 type AccordionTypes = {
   question: string;
-  response: string;
+  answer: string;
   index?: number;
   className?: string;
 };

@@ -19,7 +19,11 @@ export default function StockCard({
   return (
     <Card className="group w-full">
       <div className="h-[236px] relative w-full">
-        <p className="absolute left-4 top-4 bg-[#1976D2] text-white p-2">
+        <p
+          className={`absolute left-4 top-4 rounded-md ${
+            quantity < 50 ? "bg-[#FF3D00]" : "bg-[#1976D2]"
+          }  text-white p-2`}
+        >
           {quantity} {unit}
         </p>
         <Image
@@ -27,7 +31,7 @@ export default function StockCard({
           alt={`stock_card_${id}`}
           width={236}
           height={236}
-          className="w-[236px] h-[236px] object-cover"
+          className="w-full h-[236px] object-cover"
         />
       </div>
 
