@@ -157,6 +157,7 @@ const ADMIN_NAV: AdminNav[] = [
 ];
 
 const NODE_BACK_URL = "http://192.168.8.187:3004/api";
+const FLASK_BACK_URL = "http://localhost:5000";
 
 export {
   LANDING_NAV,
@@ -168,4 +169,5 @@ export {
   FOOTER_SOCIALS,
   ADMIN_NAV,
   NODE_BACK_URL,
+  FLASK_BACK_URL,
 };
