@@ -52,7 +52,7 @@ export const AuthProvider: FC<{ children: ReactNode }> = ({ children }) => {
           const user_role = (payload as Token).role;
 
           if (role === user_role) {
-            console.log("role:", role);
+            console.log("role: ", role);
 
             return "authorized";
           } else {

@@ -1,11 +1,15 @@
 "use client";
 
-import { ADMIN_NAV } from "@/constants/constant";
+import { usePathname } from "next/navigation";
+import { AdminNav } from "@/constants/type";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
-export default function AdminNav() {
+interface Props {
+  navs: AdminNav[];
+}
+
+export default function AdminNavComponents({ navs }: Props) {
   const pathName = usePathname();
 
   return (
@@ -20,14 +24,15 @@ export default function AdminNav() {
         />
 
         <div className="flex flex-col gap-4">
-          {ADMIN_NAV.map((item, id) => (
+          {navs.map((item, id) => (
             <Link
               key={id}
               href={item.url}
-              className={`w-full h-fit flex gap-2 items-center px-4 py-2 rounded-lg hover:bg-primary-foreground duration-200 ease-linear ${item.url === pathName
-                ? "bg-primary-foreground"
-                : "bg-transparent"
-                }`}
+              className={`w-full h-fit flex gap-2 items-center px-4 py-2 rounded-lg hover:bg-primary-foreground duration-200 ease-linear ${
+                item.url === pathName
+                  ? "bg-primary-foreground"
+                  : "bg-transparent"
+              }`}
             >
               <Image
                 src={item.url === pathName ? item.imgActive : item.img}
