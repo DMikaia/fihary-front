@@ -41,7 +41,7 @@ export default function UserPlaceNav() {
                             alt="Fihary logo"
                             className="w-[96px]"
                         />
-                        <div className="hidden lg:flex justify-center items-center gap-8">
+                        <div className="hidden xl:flex justify-center items-center gap-8">
                             {LANDING_NAV.map((item, index) => (
                                 <Link
                                     key={index}

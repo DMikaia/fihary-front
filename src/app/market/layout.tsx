@@ -1,5 +1,6 @@
 "use client"
 
+import ChatbotContainer from "@/components/shared/chatbot/ChatbotContainer";
 import UserPlaceNav from "@/components/shared/navbars/UserPlaceNav";
 import { FC, ReactNode } from "react";
 
@@ -12,6 +13,7 @@ const MarketplaceLayout: FC<MarketplaceLayoutProps> = ({ children }): JSX.Elemen
         <section className="marketplace w-full overflow-hidden">
             <UserPlaceNav />
             {children}
+            <ChatbotContainer />
         </section>
     );
 };

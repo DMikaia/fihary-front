@@ -11,7 +11,7 @@ const UserSearchForm = () => {
         console.log(value);
     };
     return (
-        <form onSubmit={() => onSubmit()} className="flex flex-col md:flex-row gap-4 items-center">
+        <form onSubmit={() => onSubmit()} className="flex-col md:flex-row gap-4 items-center hidden md:flex">
             <Input
                 placeholder="Produit, catégorie, formation"
                 value={value}
