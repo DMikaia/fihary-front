@@ -2,9 +2,10 @@
 
 import MarketProductCard from "@/components/shared/cards/MarketProductCard";
 import { MARKET_PRODUCT_MOCK } from "@/constants/__mock__/marketMock";
-import { Input } from "@/components/ui/input";
+
 import { RotateCcw, Search } from "lucide-react";
-import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
@@ -12,7 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Button } from "../../ui/button";
+import { useState } from "react";
 
 export default function MarketRightContent() {
   const [search, setSearch] = useState<string>("");

@@ -21,7 +21,10 @@ export default function OrderDialog({ total }: OrderProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="bg-primary-foreground hover:bg-primary-foreground/75 text-sm w-fit mt-10 py-6 rounded-xl">
+        <Button
+          disabled={total === 0}
+          className={`bg-primary-foreground hover:bg-primary-foreground/75 text-sm w-full mt-10 py-6 rounded-xl`}
+        >
           Confirmer - Total {total} Ar
         </Button>
       </DialogTrigger>
@@ -80,7 +83,7 @@ export default function OrderDialog({ total }: OrderProps) {
         </div>
 
         <hr className="bg-secondary-2 w-full" />
-          
+
         <OrderForm total={total} />
       </DialogContent>
     </Dialog>

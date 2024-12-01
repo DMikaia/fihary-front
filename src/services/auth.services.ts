@@ -129,7 +129,7 @@ class AuthServices {
           message: "Unauthentificated",
         };
       }
-    } catch (err: any) {
+    } catch (err) {
       if (err.response?.status === 400) {
         return { status: 400, message: "Unauthentificated" };
       }
