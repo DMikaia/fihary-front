@@ -6,14 +6,22 @@ import { Button } from "@/components/ui/button";
 import { RootState } from "@/lib/redux/store";
 import { Minus, Plus } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { DotLottiePlayer } from "@dotlottie/react-player";
-import { decrease, increase } from "../../../../lib/redux/slices/cart-slice";
+import {
+  calculateTotal,
+  decrease,
+  increase,
+} from "@/lib/redux/slices/cart-slice";
 
 /* eslint-disable @next/next/no-img-element */
 const Cart: FC = (): JSX.Element => {
   const { total, items } = useSelector((state: RootState) => state.cart);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(calculateTotal());
+  });
 
   return (
     <div className="cart my-14 w-full">
@@ -39,14 +47,14 @@ const Cart: FC = (): JSX.Element => {
             {items.map((item, id) => (
               <div key={id} className="item flex gap-8 md:gap-3 items-center">
                 <img
-                  src={`/img/${item.img}`}
+                  src={item.img}
                   alt={`cart-item_${id}`}
                   className="border border-[#BEBEBE] rounded- w-[50px] h-[50px]"
                 />
                 <div className="flex flex-col gap-2">
                   <div className="flex flex-col gap-2">
                     <h3 className="text-secondary dark:text-white font-semibold inter-tight">
-                      item.name{" "}
+                      {item.name}{" "}
                       <span className="text-secondary/70 dark:text-white font-medium text-sm inter-tight">
                         ({item.price} Ar/{item.unit})
                       </span>
