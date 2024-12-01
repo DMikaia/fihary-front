@@ -1,22 +1,20 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { useDispatch, useSelector } from "react-redux";
+import { add } from "@/lib/redux/slices/cart-slice";
 import { MarketProduct } from "@/constants/type";
 import { Button } from "@/components/ui/button";
 import { RootState } from "@/lib/redux/store";
 import Image from "next/image";
-import { add } from "../../../lib/redux/slices/cart-slice";
-
-interface ProductProps {
-  id: number;
-}
 
 export default function MarketProductCard({
   id,
   name,
-  imgUrl,
-  price,
-  unit,
-}: ProductProps & MarketProduct) {
+  ref,
+  price_unity,
+  unity,
+  image_url,
+  category,
+}: MarketProduct) {
   const { items } = useSelector((state: RootState) => state.cart);
   const isInCart = items.find((item) => item.id === id);
   const dispatch = useDispatch();
@@ -24,7 +22,7 @@ export default function MarketProductCard({
   return (
     <Card className="w-full group flex flex-col justify-between border-transparent  dark:bg-darkBackground hover:border-primary-foreground duration-200 ease-in-out rounded-lg overflow-x-hidden">
       <Image
-        src={imgUrl}
+        src={`${image_url}`}
         alt={`product_${id}`}
         width={264}
         height={264}
@@ -34,7 +32,7 @@ export default function MarketProductCard({
         <div>
           <h1 className="text-base lg:text-lg font-semibold">{name}</h1>
           <p className="text-sm md:text-base inter-tight">
-            {price} Ar/{unit}
+            {price_unity} Ar/{unity}
           </p>
         </div>
 
@@ -44,11 +42,11 @@ export default function MarketProductCard({
             dispatch(
               add({
                 id,
-                img: imgUrl,
+                img: image_url,
                 name,
-                price,
+                price: price_unity,
                 quantity: 1,
-                unit,
+                unit: unity,
               })
             )
           }

@@ -29,10 +29,13 @@ type MarketCategoryTypes = {
 };
 
 interface MarketProduct {
+  id: number;
   name: string;
-  imgUrl: string;
-  price: number;
-  unit: string;
+  ref: string;
+  price_unity: number;
+  unity: string;
+  image_url: string;
+  category: any;
 }
 
 interface MarketOrder {

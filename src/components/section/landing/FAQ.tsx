@@ -17,7 +17,7 @@ const FAQ: FC = (): JSX.Element => {
       <header className="flex flex-col md:flex-row md:justify-between md:items-end gap-4">
         <div>
           <p className="text-primary-foreground">FAQ</p>
-          <h2 className="text-secondary text-2xl md:text-3xl inter-tight max-w-[200px] mt-3 md:mt-4">
+          <h2 className="text-secondary text-2xl md:text-3xl inter-tight max-w-[200px] mt-3 md:mt-4 dark:text-white">
             Les réponses à vos questions
           </h2>
         </div>
