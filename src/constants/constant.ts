@@ -126,19 +126,19 @@ const FOOTER_SOCIALS = [
 const ADMIN_NAV: AdminNav[] = [
   {
     label: "Commande",
-    url: "/admin/order",
+    url: "/admin/stock/order",
     img: "/icons/box.svg",
     imgActive: "/icons/box-active.svg",
   },
   {
     label: "Box de proximité",
-    url: "/admin/box",
+    url: "/admin/stock//box",
     img: "/icons/user.svg",
     imgActive: "/icons/user-active.svg",
   },
   {
     label: "Paramètres",
-    url: "/admin/settings",
+    url: "/admin/stock//settings",
     img: "/icons/setting.svg",
     imgActive: "/icons/setting-active.svg",
   },
@@ -147,15 +147,21 @@ const ADMIN_NAV: AdminNav[] = [
 const SUPER_ADMIN_NAV: AdminNav[] = [
   {
     label: "Dashboard",
-    url: "/admin/dashboard",
+    url: "/admin/super/dashboard",
     img: "/icons/dashboard.svg",
     imgActive: "/icons/dashboard-active.svg",
   },
   {
     label: "Stock",
-    url: "/admin/stock",
+    url: "/admin/super/stock",
     img: "/icons/product.svg",
     imgActive: "/icons/product-active.svg",
+  },
+  {
+    label: "Paramètres",
+    url: "/admin/super/settings",
+    img: "/icons/setting.svg",
+    imgActive: "/icons/setting-active.svg",
   },
 ];
 

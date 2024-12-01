@@ -1,7 +1,7 @@
 "use client";
 
 import AdminHeader from "@/components/shared/headers/AdminHeader";
-import { ADMIN_NAV, SUPER_ADMIN_NAV } from "@/constants/constant";
+import { SUPER_ADMIN_NAV } from "@/constants/constant";
 import AdminNav from "@/components/shared/navbars/AdminNav";
 import { ReactNode, useEffect } from "react";
 import { redirect } from "next/navigation";
@@ -15,27 +15,26 @@ type AdminProps = {
 export default function AdminLayout({ children }: AdminProps) {
   const { getaccessToken, changeLoading } = useAuth();
 
-  let navs = ADMIN_NAV;
   const checkAutorisation = async () => {
-    if ((await getaccessToken("super_admin")) === "unhautorized") {
-      if ((await getaccessToken("client")) === "authorized") {
+    if ((await getaccessToken("SUPER_ADMIN")) === "unhautorized") {
+      if ((await getaccessToken("USER_USER")) === "authorized") {
         redirect("/");
+      } else if ((await getaccessToken("SUPER_ADMIN")) === "authorized") {
+        redirect("/admin/stock/order");
       } else {
         redirect("/");
       }
-    } else {
-      navs = SUPER_ADMIN_NAV;
     }
+
     changeLoading(false);
   };
-
   useEffect(() => {
     checkAutorisation();
   }, [getaccessToken]);
 
   return (
     <section className="admin w-full overflow-hidden flex min-h-screen">
-      <AdminNav navs={navs} />
+      <AdminNav navs={SUPER_ADMIN_NAV} />
 
       <div className="lg:ml-[260px] xl:ml-[280px] flex flex-col gap-8 py-8 w-full lg:w-[calc(100%-280px)] lx:w-[calc(100%-280px)]">
         <AdminHeader />

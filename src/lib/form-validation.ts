@@ -23,6 +23,8 @@ const orderFormSchema = z.object({
     .string()
     .min(10, { message: "Le numéro mobile doit être 10 chiffres" }),
   location: z.string().min(8, { message: "Une adresse est requise" }),
+  city: z.string().min(1, { message: "Une ville est requise" }),
+  quartier: z.string().min(1, { message: "Un quartier est requis" }),
 });
 
 const adminFormSchema = z.object({
