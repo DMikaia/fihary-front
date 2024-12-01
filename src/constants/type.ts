@@ -112,6 +112,11 @@ interface Response<T> {
   data?: T;
 }
 
+interface Token {
+  stockId?: number;
+  role: string;
+}
+
 export type {
   LandingNav,
   LoginSlider,
@@ -128,4 +133,5 @@ export type {
   Stock,
   Box,
   Response,
+  Token,
 };
