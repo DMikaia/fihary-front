@@ -1,26 +1,13 @@
 "use server";
 
+import { Token } from "../constants/type";
 import jwt from "jsonwebtoken";
-const SECRET_KEY = "FIHARY";
 
-const generateToken = async (
-  email: string,
-  password: string,
-  role: string
-) => {
-  const token = jwt.sign(
-    { email: email, password: password, role: role },
-    SECRET_KEY,
-    {
-      expiresIn: "25d",
-    }
-  );
-  return token;
-};
+const SECRET_KEY = "TRIMOBExfihary";
 
-const verifyToken = async (token: string) => {
+const verifyToken = async (token: string): Promise<Token> => {
   const payload = jwt.verify(token, SECRET_KEY);
-  return payload;
+  return payload as Token;
 };
 
-export { generateToken, verifyToken };
+export { verifyToken };

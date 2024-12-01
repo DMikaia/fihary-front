@@ -113,8 +113,9 @@ interface Response<T> {
 }
 
 interface Token {
+  userId: number;
   stockId?: number;
-  role: string;
+  role: "SUPER_ADMIN" | "STOCK_ADMIN" | "USER_USER";
 }
 
 export type {

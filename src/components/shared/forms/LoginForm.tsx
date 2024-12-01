@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/form";
 import authServices from "@/services/auth.services";
 import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "../../../hooks/useAuth";
 
 export default function LoginForm() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -28,6 +29,7 @@ export default function LoginForm() {
       password: "",
     },
   });
+  const { setaccessToken } = useAuth();
 
   const handleSubmit = async (data: LoginFormSchema) => {
     setLoading(true);
@@ -37,6 +39,8 @@ export default function LoginForm() {
       toast({
         title: " Utilisateur authentifié avec succés!",
       });
+
+      setaccessToken(loginResponse.data as string);
     } else {
       toast({
         title: "Un erreur s'est produit!",

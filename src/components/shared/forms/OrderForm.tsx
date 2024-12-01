@@ -13,6 +13,16 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import orderService from "../../../services/order.service";
 
 interface OrderProps {
   total: number;
@@ -20,11 +30,16 @@ interface OrderProps {
 
 export default function OrderForm({ total }: OrderProps) {
   const [loading, setLoading] = useState<boolean>(false);
+  const [districts, setDistict] = useState<
+    { id: number; name: string; city_id: number }[]
+  >([]);
   const form = useForm<OrderFormSchema>({
     resolver: zodResolver(orderFormSchema),
     defaultValues: {
       mobileNumber: "",
       location: "",
+      quartier: "",
+      city: "",
     },
   });
 
@@ -58,6 +73,81 @@ export default function OrderForm({ total }: OrderProps) {
                     placeholder="034 87 167 14 (Par défaut)"
                     {...field}
                   />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="city"
+            render={({ field }) => (
+              <FormItem className="w-full">
+                <FormLabel className="text-base">Ville</FormLabel>
+                <FormControl>
+                  <Select
+                    value={field.value}
+                    onValueChange={async (e) => {
+                      field.onChange(e); // Update the form state
+                      const value = await orderService.getQuartier(Number(e));
+                      if (value) {
+                        setDistict(value);
+                      }
+                    }}
+                  >
+                    <SelectTrigger className="w-full">
+                      <SelectValue placeholder="Selectionner une ville" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectGroup>
+                        <SelectLabel></SelectLabel>
+                        <SelectItem value={"1"}>
+                          Antanarivo Renivohitra
+                        </SelectItem>
+                        <SelectItem value={"2"}>
+                          Antanarivo Avaradrano
+                        </SelectItem>
+                        <SelectItem value={"3"}>
+                          Antanarivo Antsimondrano
+                        </SelectItem>
+                        <SelectItem value={"4"}>
+                          Antanarivo Ambohidratrimo
+                        </SelectItem>
+                      </SelectGroup>
+                    </SelectContent>
+                  </Select>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="quartier"
+            render={({ field }) => (
+              <FormItem className="w-full">
+                <FormLabel className="text-base">Quartier</FormLabel>
+                <FormControl>
+                  <Select
+                    value={field.value}
+                    onValueChange={(e) => field.onChange(e)} // Update the form state
+                  >
+                    <SelectTrigger className="w-full">
+                      <SelectValue placeholder="Selectionner un quartier" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectGroup>
+                        <SelectLabel></SelectLabel>
+                        {districts.map((item) => (
+                          <SelectItem key={item.id} value={`${item.id}`}>
+                            {item.name}
+                          </SelectItem>
+                        ))}
+                      </SelectGroup>
+                    </SelectContent>
+                  </Select>
                 </FormControl>
                 <FormMessage />
               </FormItem>
