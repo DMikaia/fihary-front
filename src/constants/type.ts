@@ -118,6 +118,15 @@ interface Token {
   role: "SUPER_ADMIN" | "STOCK_ADMIN" | "USER_USER";
 }
 
+interface CartItem {
+  id: number;
+  img: string;
+  name: string;
+  price: number;
+  quantity: number;
+  unit: string;
+}
+
 export type {
   LandingNav,
   LoginSlider,
@@ -135,4 +144,5 @@ export type {
   Box,
   Response,
   Token,
+  CartItem,
 };
