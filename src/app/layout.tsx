@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import type { Metadata } from "next";
 import "./globals.css";
 import StoreProvider from "../providers/StoreProvider";
+import { AuthProvider } from "@/contexts/AuthContext";
 import { Toaster } from "@/components/ui/toaster";
 
 const workSans = localFont({
@@ -31,7 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${workSans.className} ${interTight.variable} antialiased`}>
+      <body
+        className={`${workSans.className} ${interTight.variable} antialiased`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -39,7 +42,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <StoreProvider>
-            {children}
+            <AuthProvider>{children}</AuthProvider>
             <Toaster />
           </StoreProvider>
         </ThemeProvider>

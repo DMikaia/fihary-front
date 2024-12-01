@@ -125,22 +125,10 @@ const FOOTER_SOCIALS = [
 
 const ADMIN_NAV: AdminNav[] = [
   {
-    label: "Dashboard",
-    url: "/admin/dashboard",
-    img: "/icons/dashboard.svg",
-    imgActive: "/icons/dashboard-active.svg",
-  },
-  {
     label: "Commande",
     url: "/admin/order",
     img: "/icons/box.svg",
     imgActive: "/icons/box-active.svg",
-  },
-  {
-    label: "Stock",
-    url: "/admin/stock",
-    img: "/icons/product.svg",
-    imgActive: "/icons/product-active.svg",
   },
   {
     label: "Box de proximité",
@@ -156,6 +144,21 @@ const ADMIN_NAV: AdminNav[] = [
   },
 ];
 
+const SUPER_ADMIN_NAV: AdminNav[] = [
+  {
+    label: "Dashboard",
+    url: "/admin/dashboard",
+    img: "/icons/dashboard.svg",
+    imgActive: "/icons/dashboard-active.svg",
+  },
+  {
+    label: "Stock",
+    url: "/admin/stock",
+    img: "/icons/product.svg",
+    imgActive: "/icons/product-active.svg",
+  },
+];
+
 const NODE_BACK_URL = "http://192.168.8.187:8000/api";
 const FLASK_BACK_URL = "http://localhost:5000";
 
@@ -168,6 +171,7 @@ export {
   FOOTER_OTHERS,
   FOOTER_SOCIALS,
   ADMIN_NAV,
+  SUPER_ADMIN_NAV,
   NODE_BACK_URL,
   FLASK_BACK_URL,
 };
