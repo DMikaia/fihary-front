@@ -1,8 +1,6 @@
 "use client";
 
 import MarketProductCard from "@/components/shared/cards/MarketProductCard";
-import { MARKET_PRODUCT_MOCK } from "@/constants/__mock__/marketMock";
-
 import { RotateCcw, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -13,12 +11,28 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import productService from "@/services/product.service";
+import { MarketProduct } from "@/constants/type";
 
 export default function MarketRightContent() {
+  const [data, setData] = useState<MarketProduct[]>([]);
   const [search, setSearch] = useState<string>("");
   const [sort, setSort] = useState<string>("");
   const [show, setShow] = useState<boolean>(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const fetchedData: MarketProduct[] = await productService.getProduct();
+        setData(fetchedData);
+      } catch (error) {
+        console.error("Failed to fetch data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className="market__right flex flex-col gap-4 flex-1 w-full lg:px-6">
@@ -81,14 +95,16 @@ export default function MarketRightContent() {
       </div>
 
       <div className="market__products w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
-        {MARKET_PRODUCT_MOCK.map((item, id) => (
+        {data.map((item, id) => (
           <MarketProductCard
             key={id}
             id={id}
+            ref={item.ref}
             name={item.name}
-            imgUrl={item.imgUrl}
-            price={item.price}
-            unit={item.unit}
+            image_url={item.image_url}
+            price_unity={item.price_unity}
+            unity={item.unity}
+            category={item.category}
           />
         ))}
       </div>

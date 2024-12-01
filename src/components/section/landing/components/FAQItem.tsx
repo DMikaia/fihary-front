@@ -27,7 +27,7 @@ export default function ({
 
   return (
     <article
-      className={`faq__card bg-white shadow flex w-full rounded-xl cursor-pointer ${
+      className={`faq__card bg-white dark:bg-darkBackground shadow flex w-full rounded-xl cursor-pointer ${
         isActive ? "sticky-open" : "sticky-close"
       }  ${
         isActive
@@ -45,7 +45,9 @@ export default function ({
         }`}
       >
         <h3 className="text-lg text-blue01 calSans">{question}</h3>
-        <p className={`${isActive ? "flex" : "hidden"}`}>{answer}</p>
+        <p className={`${isActive ? "flex" : "hidden"} dark:text-darkGray`}>
+          {answer}
+        </p>
       </div>
       <img
         src={
